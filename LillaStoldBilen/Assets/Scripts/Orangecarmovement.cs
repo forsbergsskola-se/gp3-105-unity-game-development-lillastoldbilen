@@ -15,8 +15,9 @@ public class Orangecarmovement : MonoBehaviour
         rigidbody rigidbody = GetComponent<Rigidbody>();
         rigidbody.AddForce(0, 0, speedForce);
         rigidbody.AddForce(0, 0, maxSpeed);
-        rigidbody.angularVelocity = new vector 3 (0,0,0)
+        rigidbody.angularVelocity = new vector 3(0, 0, 0);
     }
+    
 
     // Update is called once per frame
     void Update()
