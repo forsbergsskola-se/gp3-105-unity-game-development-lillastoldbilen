@@ -1,6 +1,4 @@
-using DefaultNamespace;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,7 +7,6 @@ public class PlayerController : MonoBehaviour
     public float horizontalInput;
     public float verticalInput;
     public float turnSpeed = 10;
-    // Start is called before the first frame update
     void Start()
     {
         Player player = new Player();
