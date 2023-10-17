@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Orangecarmovement : MonoBehaviour
@@ -11,6 +9,7 @@ public class Orangecarmovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         transform.Translate(0, 0, moveSpeed * Time.deltaTime);
         rigidbody rigidbody = GetComponent<Rigidbody>();
         rigidbody.AddForce(0, 0, speedForce);
@@ -25,3 +24,4 @@ public class Orangecarmovement : MonoBehaviour
         
     }
 }
+
