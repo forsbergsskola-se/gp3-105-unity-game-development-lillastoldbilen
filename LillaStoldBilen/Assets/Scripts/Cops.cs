@@ -1,6 +1,8 @@
+using UnityEngine;
+
 namespace DefaultNamespace
 {
-    public class Cops : Npc
+    public class Cops : MonoBehaviour
     {
         
     }

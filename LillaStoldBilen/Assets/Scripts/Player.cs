@@ -1,6 +1,8 @@
+using UnityEngine;
+
 namespace DefaultNamespace
 {
-    public class Player : Npc
+    public class Player : MonoBehaviour
     {
         
     }
