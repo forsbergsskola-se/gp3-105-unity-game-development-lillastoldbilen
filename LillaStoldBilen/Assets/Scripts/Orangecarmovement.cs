@@ -17,6 +17,14 @@ public class Orangecarmovement : MonoBehaviour
         rigidbody.AddForce(0, 0, maxSpeed);
         rigidbody.angularVelocity = new Vector3(0, 0, 0);
     }
+    bool IstouchingTheGround()
+    {
+        int layerMask = LayerMask.GetMak("Ground");
+        return Physics.CheckBox(transform.position, transform.lossScale / 1.99f, transform.rotation, layerMask);
+    }
+}
+    
+    
     
 
     // Update is called once per frame
