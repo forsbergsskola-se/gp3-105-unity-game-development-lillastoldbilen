@@ -4,7 +4,7 @@ namespace DefaultNamespace
 {
     public class Npc : MonoBehaviour
     {
-        public int Health;
-        public float MovementSpeed = 10f;
+        public int Health = 90;
+        public float MovementSpeed;
     }
 }
