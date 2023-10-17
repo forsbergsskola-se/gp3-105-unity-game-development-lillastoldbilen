@@ -1,12 +1,14 @@
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody rb;
     public Transform player;
-    public float speed = 10f;
-    
+    public float horizontalInput;
+    public float verticalInput;
+    public float turnSpeed = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
-        rb.velocity = new Vector3(speed, speed, speed);
+        horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
+        
+        transform.Translate(Vector3.forward * Time.deltaTime * verticalInput);
+        transform.Rotate(-Vector3.up * horizontalInput * turnSpeed * Time.deltaTime);
     }
 }
