@@ -1326,7 +1326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6268069733278782061, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.59
+      value: -16.92
       objectReference: {fileID: 0}
     - target: {fileID: 6268069733278782061, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2730,11 +2730,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7faad6fb864e1419b08bfc2bbf3039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  player: {fileID: 0}
-  horizontalInput: 0
-  verticalInput: 0
-  turnSpeed: 100
 --- !u!1 &1990653331 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100166, guid: 8fa2a9d0520e5304190570b9b32fff5a, type: 3}
