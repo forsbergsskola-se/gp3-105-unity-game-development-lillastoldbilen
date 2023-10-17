@@ -19,8 +19,8 @@ public class Orangecarmovement : MonoBehaviour
     }
     bool IstouchingTheGround()
     {
-        int layerMask = LayerMask.GetMak("Ground");
-        return Physics.CheckBox(transform.position, transform.lossScale / 1.99f, transform.rotation, layerMask);
+        int layerMask = LayerMask.GetMask("Ground");
+        return Physics.CheckBox(transform.position, transform.lossyScale / 1.99f, transform.rotation, layerMask);
     }
 }
     
