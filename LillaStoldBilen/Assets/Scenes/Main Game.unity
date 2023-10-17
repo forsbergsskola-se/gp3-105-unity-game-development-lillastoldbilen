@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1619,7 +1619,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: -0.09, y: 3.21, z: -19.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1699,6 +1699,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100166, guid: 8f2819ec541c5ea458231eafa3b5f1ae, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1456277552}
+    - targetCorrespondingSourceObject: {fileID: 100166, guid: 8f2819ec541c5ea458231eafa3b5f1ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1456277555}
   m_SourcePrefab: {fileID: 100100000, guid: 8f2819ec541c5ea458231eafa3b5f1ae, type: 3}
 --- !u!1 &1054702737
 GameObject:
@@ -2033,7 +2036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400166, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.091
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 400166, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2149,6 +2152,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100166, guid: d5480912f7a1d7a4294a1ce13a774f7d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1498251530}
+    - targetCorrespondingSourceObject: {fileID: 100166, guid: d5480912f7a1d7a4294a1ce13a774f7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1498251533}
   m_SourcePrefab: {fileID: 100100000, guid: d5480912f7a1d7a4294a1ce13a774f7d, type: 3}
 --- !u!4 &1389811291 stripped
 Transform:
@@ -2334,6 +2340,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.25, z: 1}
   m_Center: {x: 0, y: 0.76, z: 0}
+--- !u!114 &1456277555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456277543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e0400fd424c788c90645f45c7d2ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 90
+  MovementSpeed: 0
 --- !u!1 &1465198072
 GameObject:
   m_ObjectHideFlags: 0
@@ -2513,6 +2533,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.25, z: 1}
   m_Center: {x: 0, y: 0.76, z: 0}
+--- !u!114 &1498251533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498251521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20e35de95a54bcb80d6d20a9387bb29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 150
+  MovementSpeed: 0
 --- !u!1 &1677786442
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,11 +2764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7faad6fb864e1419b08bfc2bbf3039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  player: {fileID: 0}
-  horizontalInput: 0
-  verticalInput: 0
-  turnSpeed: 100
+  speed: 6
 --- !u!1 &1990653331 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100166, guid: 8fa2a9d0520e5304190570b9b32fff5a, type: 3}
@@ -2809,6 +2839,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.25, z: 1}
   m_Center: {x: 0, y: 0.76, z: 0}
+--- !u!114 &1990653343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990653331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 017e0400fd424c788c90645f45c7d2ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 90
+  MovementSpeed: 0
 --- !u!1 &2027145450
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,6 +3023,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100166, guid: 8fa2a9d0520e5304190570b9b32fff5a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1990653340}
+    - targetCorrespondingSourceObject: {fileID: 100166, guid: 8fa2a9d0520e5304190570b9b32fff5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1990653343}
   m_SourcePrefab: {fileID: 100100000, guid: 8fa2a9d0520e5304190570b9b32fff5a, type: 3}
 --- !u!1 &2074217736
 GameObject:
