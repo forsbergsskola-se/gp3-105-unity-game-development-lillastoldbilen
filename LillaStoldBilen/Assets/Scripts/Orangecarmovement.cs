@@ -7,10 +7,11 @@ public class Orangecarmovement : MonoBehaviour
     public float maxSpeed;
     public float speedForce;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+// Start is called before the first frame update
+// srat gameloop
 
+    void Update()
+    {
         transform.Translate(0, 0, moveSpeed * Time.deltaTime);
         Rigidbody rigidbody = GetComponent<Rigidbody>();
         rigidbody.AddForce(0, 0, speedForce);
@@ -24,3 +25,6 @@ public class Orangecarmovement : MonoBehaviour
         return Physics.CheckBox(transform.position, transform.lossyScale / 1.99f, transform.rotation, layerMask);
     }
 }
+
+// Render : Presenting to the user (computer screen)
+
