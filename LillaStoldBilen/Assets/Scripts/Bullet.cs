@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour
     
     void Update()
     {
-        isShooting |= Input.GetKeyDown(KeyCode.Mouse0);
+            isShooting |= Input.GetKeyDown(KeyCode.Mouse0);
     }
 
     void FixedUpdate()
