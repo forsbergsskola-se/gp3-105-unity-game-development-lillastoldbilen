@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour
 {
-    public float OnscreenDelay = 1f;
+    public float OnscreenDelay = 03f;
     private void OnCollisionEnter(Collision other)
     {
         
