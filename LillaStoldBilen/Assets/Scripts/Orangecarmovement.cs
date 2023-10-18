@@ -30,7 +30,7 @@ public class Orangecarmovement : MonoBehaviour
 // Update gameloop
     void update 
     {
-        transform.translate(x:0, y:0, z:1); // In every frame the car will move 1 along z 
+        transform.translate(x:0, y:0, z:1f); // In every frame the car will move 1 along z 
     }
 }
 
