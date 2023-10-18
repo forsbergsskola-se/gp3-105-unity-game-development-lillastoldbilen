@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class Gun : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
-    public GameObject Bullet;
+    [FormerlySerializedAs("Bullet")] public GameObject bullet;
     public float BulletSpeed = 100f;
 
     private bool isShooting;
@@ -19,7 +20,7 @@ public class Gun : MonoBehaviour
     {
         if (isShooting)
         {
-            GameObject newBullet = Instantiate(Bullet, this.transform.position + new Vector3(0,0,1),this.transform.rotation);
+            GameObject newBullet = Instantiate(bullet, this.transform.position + new Vector3(0,0,1),this.transform.rotation);
             Rigidbody BulletRB = newBullet.GetComponent<Rigidbody>();
             BulletRB.velocity = this.transform.forward * BulletSpeed;
         }
