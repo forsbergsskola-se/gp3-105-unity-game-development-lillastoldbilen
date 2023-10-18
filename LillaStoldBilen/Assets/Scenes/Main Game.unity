@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -922,89 +922,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 12644502}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!1 &439865060
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 439865063}
-  - component: {fileID: 439865062}
-  - component: {fileID: 439865061}
-  m_Layer: 0
-  m_Name: Bottle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &439865061
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439865060}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &439865062
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439865060}
-  m_Mesh: {fileID: 4300138, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
---- !u!4 &439865063
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439865060}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.36349136, y: -0.48084918, z: -0.58686614, w: -0.54059803}
-  m_LocalPosition: {x: 1.3380392, y: 0.7310506, z: -8.206069}
-  m_LocalScale: {x: 0.26593325, y: 0.7109497, z: 0.6363}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -9.868, y: 73.894, z: 87.27}
 --- !u!1001 &515484165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1087,11 +1004,6 @@ PrefabInstance:
       addedObject: {fileID: 81072193}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdd8b59fd28ade14d951aeeb4c9644d0, type: 3}
---- !u!1 &571505832 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4673442993798496741, guid: e6192f5acc762bb40b64ad79b10ba0aa, type: 3}
-  m_PrefabInstance: {fileID: 280309397}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &571836139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3086,7 +2998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 8
-  rotateSpeed: 8
+  rotateSpeed: 10
 --- !u!114 &1983528280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3099,7 +3011,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e1e095c6ea308499beb652c603cad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 571505832}
+  magazin: 10
+  Bullet: {fileID: 4673442993798496741, guid: e6192f5acc762bb40b64ad79b10ba0aa, type: 3}
   BulletSpeed: 100
 --- !u!136 &1983528281
 CapsuleCollider:
@@ -3460,7 +3373,6 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 571836139}
   - {fileID: 515484165}
-  - {fileID: 439865063}
   - {fileID: 1317839981}
   - {fileID: 1028231514}
   - {fileID: 2032030451}
