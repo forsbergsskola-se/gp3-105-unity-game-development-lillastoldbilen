@@ -10,7 +10,7 @@ public class Orangecarmovement : MonoBehaviour
 // Start is called before the first frame update
 // srat gameloop
 
-    void Start()
+    void Update()
     {
 
         transform.Translate(0, 0, moveSpeed * Time.deltaTime);
@@ -25,13 +25,7 @@ public class Orangecarmovement : MonoBehaviour
         int layerMask = LayerMask.GetMask("Ground");
         return Physics.CheckBox(transform.position, transform.lossyScale / 1.99f, transform.rotation, layerMask);
     }
-
-// update is called one per frame
-// Update gameloop
-    void update 
-    {
-        transform.translate(x:0, y:0, z:1f); // In every frame the car will move 1 along z 
-    }
 }
 
 // Render : Presenting to the user (computer screen)
+
