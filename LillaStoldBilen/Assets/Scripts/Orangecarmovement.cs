@@ -12,7 +12,6 @@ public class Orangecarmovement : MonoBehaviour
 
     void Update()
     {
-
         transform.Translate(0, 0, moveSpeed * Time.deltaTime);
         Rigidbody rigidbody = GetComponent<Rigidbody>();
         rigidbody.AddForce(0, 0, speedForce);
