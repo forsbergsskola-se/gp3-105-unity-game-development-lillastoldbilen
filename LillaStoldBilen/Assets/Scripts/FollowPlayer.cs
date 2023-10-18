@@ -4,6 +4,8 @@ public class FollowPlayer : MonoBehaviour
     private void LateUpdate()
     {
         GameObject player = GameObject.Find("Player");
+        GameObject camera = GameObject.Find("Main Camera");
+        camera.transform.parent = player.transform;
         if (player == null)
         {
             return;
