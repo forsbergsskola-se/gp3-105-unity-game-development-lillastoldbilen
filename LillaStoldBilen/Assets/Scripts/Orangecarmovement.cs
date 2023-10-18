@@ -28,7 +28,7 @@ public class Orangecarmovement : MonoBehaviour
 
 // update is called one per frame
 // Update gameloop
-    void update 
+    void update ()
     {
         transform.translate(x:0, y:0, z:1f); // In every frame the car will move 1 along z 
     }
