@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 public class FollowPlayer : MonoBehaviour
 {
-    public GameObject Player;
-    void Start()
+    private void LateUpdate()
     {
-        
-    }
+        GameObject player = GameObject.Find("Player");
+        if (player == null)
+        {
+            return;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Vector3 target = player.transform.position + new Vector3(0, 1.4f, -5);
+        transform.position = target;
     }
 }
