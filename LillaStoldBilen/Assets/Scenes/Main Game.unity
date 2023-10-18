@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1774,12 +1774,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.36, y: 1, z: -16.66}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.16800001, y: 0.909, z: -8.028}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1983528282}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!45 &963194229
 Skybox:
@@ -2505,7 +2505,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400166, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 963194228}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100166, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
       insertIndex: -1
@@ -3173,7 +3176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7faad6fb864e1419b08bfc2bbf3039, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  moveSpeed: 6
+  rotateSpeed: 10
 --- !u!114 &1983528280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3188,6 +3192,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet: {fileID: 571505832}
   BulletSpeed: 100
+--- !u!4 &1983528282 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400166, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
+  m_PrefabInstance: {fileID: 1317839981}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1990653331 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100166, guid: 8fa2a9d0520e5304190570b9b32fff5a, type: 3}
@@ -3542,7 +3551,6 @@ BoxCollider:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 963194228}
   - {fileID: 705507995}
   - {fileID: 571836139}
   - {fileID: 515484165}
