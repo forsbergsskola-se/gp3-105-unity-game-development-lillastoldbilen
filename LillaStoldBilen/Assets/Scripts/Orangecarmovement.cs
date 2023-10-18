@@ -7,7 +7,9 @@ public class Orangecarmovement : MonoBehaviour
     public float maxSpeed;
     public float speedForce;
 
-    // Start is called before the first frame update
+// Start is called before the first frame update
+// srat gameloop
+
     void Start()
     {
 
@@ -23,4 +25,13 @@ public class Orangecarmovement : MonoBehaviour
         int layerMask = LayerMask.GetMask("Ground");
         return Physics.CheckBox(transform.position, transform.lossyScale / 1.99f, transform.rotation, layerMask);
     }
+
+// update is called one per frame
+// Update gameloop
+    void update 
+    {
+        transform.translate(x:0, y:0, z:1); // In every frame the car will move 1 along z 
+    }
 }
+
+// Render : Presenting to the user (computer screen)
