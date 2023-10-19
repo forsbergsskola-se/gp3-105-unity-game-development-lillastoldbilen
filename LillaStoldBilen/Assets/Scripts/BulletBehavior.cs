@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class BulletBehavior : MonoBehaviour
 {
-    public float OnscreenDelay = 03f;
+    public float OnscreenDelay = 001f;
+    public GameObject BulletFire;
     private void OnCollisionEnter(Collision other)
     {
-        
+        GameObject bulletFire = Instantiate(BulletFire, this.transform);
         Destroy(this.gameObject, OnscreenDelay);
     }
 }

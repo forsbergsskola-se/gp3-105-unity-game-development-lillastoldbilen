@@ -5,8 +5,9 @@ using UnityEngine;
 public class Bottle_HealUp : MonoBehaviour
 {
     public int bottleHP = 20;
-    void Update()
+    public Player HealthPlus;
+    public void HealUp ()
     {
-        
+        HealthPlus.Health += bottleHP;
     }
 }
