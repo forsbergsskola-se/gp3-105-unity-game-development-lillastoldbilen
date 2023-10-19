@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class Quest : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool isActive;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string Title;
+    public string Description;
+    public int CurrencyReward;
 }
