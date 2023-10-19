@@ -2519,6 +2519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1983528269}
+  smoothSpeed: 10
 --- !u!1001 &1028231514
 PrefabInstance:
   m_ObjectHideFlags: 0
