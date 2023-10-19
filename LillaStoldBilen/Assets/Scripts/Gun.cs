@@ -27,4 +27,13 @@ public class Gun : MonoBehaviour
             Debug.Log("Magazin is empty");
         isShooting = false;
     }
+
+    void Reload() //UNDONE
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            magazin = 10;
+            Debug.Log("Gun is reloaded");
+        }
+    }
 }
