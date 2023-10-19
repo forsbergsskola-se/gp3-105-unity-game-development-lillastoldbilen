@@ -2,29 +2,40 @@ using UnityEngine;
 
 public class Orangecarmovement : MonoBehaviour
 {
-    public float moveSpeed;
-    public float crashForce;
-    public float maxSpeed;
-    public float speedForce;
-
-// Start is called before the first frame update
-// srat gameloop
+    public float accelerationSpeed = 1f; // just random numbers for start: i will change it later 
+    public float turnSpeed = 0.5f;
+    public float reverseSpeed = 1f;
+    public float brakeSpeed = 1f;
+    private bool InCar = false; // It changed automatically to private here
 
     void Update()
     {
-        transform.Translate(0, 0, moveSpeed * Time.deltaTime);
-        Rigidbody rigidbody = GetComponent<Rigidbody>();
-        rigidbody.AddForce(0, 0, speedForce);
-        rigidbody.AddForce(0, 0, maxSpeed);
-        rigidbody.angularVelocity = new Vector3(0, 0, 0);
+       if (Input.GetKeyDown(KeyCode.E) && !InCar) // I used the same key to enter and excite the car (E)
+       {
+           EnterCar(); // I will write a method later int the code 
+       }
+       if (Input.GetKeyDown(KeyCode.E) && InCar)
+       {
+           ExitCar(); // I will write a methode later in the code (I need to think first)
+       }
+       if(InCar)
+       {
+           {
+               if (Input.GetKeyDown(KeyCode.W))
+               {
+                   car.transform.translate(Vector3.forward * accelerationSpeed * Time.deltaTime);
+               }
+               if(Input.GetKeyDown(KeyCode.S))
+               {
+                   Car.transform.translate(Vector3.forward * -brakeSpeed * Time.deltaTime);
+               }
+               if (Input.GetKeyDown(KeyCode.A))
+               {
+                   car.transform.Rotate(Vector3.)
+               }
+           }
+       }
     }
+    
 
-    bool IstouchingTheGround()
-    {
-        int layerMask = LayerMask.GetMask("Ground");
-        return Physics.CheckBox(transform.position, transform.lossyScale / 1.99f, transform.rotation, layerMask);
-    }
-}
-
-// Render : Presenting to the user (computer screen)
 
