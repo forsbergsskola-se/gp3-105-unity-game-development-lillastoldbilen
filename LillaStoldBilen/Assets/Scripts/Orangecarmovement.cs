@@ -10,32 +10,36 @@ public class Orangecarmovement : MonoBehaviour
 
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.E) && !InCar) // I used the same key to enter and excite the car (E)
-       {
-           EnterCar(); // I will write a method later int the code 
-       }
-       if (Input.GetKeyDown(KeyCode.E) && InCar)
-       {
-           ExitCar(); // I will write a methode later in the code (I need to think first)
-       }
-       if(InCar)
-       {
-           {
-               if (Input.GetKeyDown(KeyCode.W))
-               {
-                   car.transform.translate(Vector3.forward * accelerationSpeed * Time.deltaTime);
-               }
-               if(Input.GetKeyDown(KeyCode.S))
-               {
-                   Car.transform.translate(Vector3.forward * -brakeSpeed * Time.deltaTime);
-               }
-               if (Input.GetKeyDown(KeyCode.A))
-               {
-                   car.transform.Rotate(Vector3.)
-               }
-           }
-       }
+        // if (Input.GetKeyDown(KeyCode.E) && !InCar) // I used the same key to enter and excite the car (E)
+        // {
+        //     EnterCar(); // I will write a method later int the code 
+        // }
+        //
+        // if (Input.GetKeyDown(KeyCode.E) && InCar)
+        // {
+        //     ExitCar(); // I will write a methode later in the code (I need to think first)
+        // }
+        //
+        // if (InCar)
+        // {
+        //     if (Input.GetKeyDown(KeyCode.W))
+        //     {
+        //         transform.Translate(Vector3.forward * accelerationSpeed * Time.deltaTime);
+        //     }
+        //
+        //     if (Input.GetKeyDown(KeyCode.S))
+        //     {
+        //         transform.Translate(Vector3.forward * -brakeSpeed * Time.deltaTime);
+        //     }
+        //
+        //     if (Input.GetKeyDown(KeyCode.A))
+        //     {
+        //         transform.Rotate(Vector3.up, -turnSpeed * Time.deltaTime);
+        //     }
+        //     if (Input.GetKeyDown(KeyCode.D))
+        //     {
+        //         transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
+        //     }
+        // }
     }
-    
-
-
+}

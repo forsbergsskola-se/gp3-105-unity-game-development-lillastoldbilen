@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Quest : MonoBehaviour
+[System.Serializable]
+public class Quest
 {
     public bool isActive;
 
