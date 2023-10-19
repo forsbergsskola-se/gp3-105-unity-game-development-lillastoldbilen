@@ -8,13 +8,13 @@ public class Gun : MonoBehaviour
 {
     public int magazin = 10;
     public GameObject Bullet;
-    public float BulletSpeed = 100f;
+    public float BulletSpeed = 700f;
 
     private bool isShooting;
     
     void Update()
-    {
-            isShooting |= Input.GetKeyDown(KeyCode.Mouse0);
+    { 
+        isShooting |= Input.GetKeyDown(KeyCode.Mouse0);
     }
 
     void FixedUpdate()
