@@ -1544,8 +1544,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
-  Title: 
-  Description: 
+  Title: Learn the Basics
+  Description: Lets go over how to get around
   CurrencyReward: 0
 --- !u!4 &571896776
 Transform:
@@ -4191,6 +4191,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100166, guid: 8f2819ec541c5ea458231eafa3b5f1ae, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1674425484}
+    - targetCorrespondingSourceObject: {fileID: 100166, guid: 8f2819ec541c5ea458231eafa3b5f1ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1674425487}
   m_SourcePrefab: {fileID: 100100000, guid: 8f2819ec541c5ea458231eafa3b5f1ae, type: 3}
 --- !u!1 &1674425481 stripped
 GameObject:
@@ -4261,6 +4264,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quest: {fileID: 571896775}
   player: {fileID: 1983528269}
+--- !u!65 &1674425487
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674425481}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.75, y: 4.46, z: 2.79}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1721993674 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8971713701178029905, guid: 797a2dbaceea962469b9774c7ed4d4af, type: 3}
