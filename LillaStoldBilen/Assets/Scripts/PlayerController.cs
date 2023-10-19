@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
     public float rotateSpeed = 10f;
 
     private Rigidbody playerRigidbody;
-    
+    public bool OnEnable { get; set; }
+
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody>();
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+            // enter car
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 localForward = transform.forward;
