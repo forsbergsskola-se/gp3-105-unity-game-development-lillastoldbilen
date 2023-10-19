@@ -15,10 +15,7 @@ public class Gun : MonoBehaviour
     void Update()
     { 
         isShooting |= Input.GetKeyDown(KeyCode.Mouse0);
-    }
-
-    void FixedUpdate()
-    {
+        
         if (isShooting && magazin > 0)
         {
             GameObject newBullet = Instantiate(Bullet, this.transform.position + new Vector3(0,0,1),this.transform.rotation);
@@ -26,10 +23,8 @@ public class Gun : MonoBehaviour
             BulletRB.velocity = this.transform.forward * BulletSpeed;
             magazin--;
         }
-        if (magazin == 0)
+        else if(magazin == 0 && isShooting)
             Debug.Log("Magazin is empty");
-        
-
         isShooting = false;
     }
 }
