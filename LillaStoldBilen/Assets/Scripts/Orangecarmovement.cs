@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class Orangecarmovement : MonoBehaviour
 {
-    public float accelerationSpeed = 1f; // just random numbers for start: i will change it later 
-    public float turnSpeed = 0.5f;
-    public float reverseSpeed = 1f;
-    private bool InCar = false; // It changed automatically to private here
+    public float accelerationSpeed = 100f;
+    public float turnSpeed = 100f;
+    public float reverseSpeed = 100f;
+    public bool InCar = false;
 
     void Update()
     {
@@ -33,6 +33,10 @@ public class Orangecarmovement : MonoBehaviour
             {
                 transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
             }
+        }
+        else
+        {
+            
         }
     }
 
