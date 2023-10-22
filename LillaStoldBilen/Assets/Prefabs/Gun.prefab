@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5123287469775308950}
   - component: {fileID: 3634619133702121400}
   - component: {fileID: 6711287419975320851}
+  - component: {fileID: -4589973894171520814}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Item
@@ -83,3 +84,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-4589973894171520814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4650136875367145726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48e1e095c6ea308499beb652c603cad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magazin: 10
+  Bullet: {fileID: 4673442993798496741, guid: e6192f5acc762bb40b64ad79b10ba0aa, type: 3}
+  BulletSpeed: 700
