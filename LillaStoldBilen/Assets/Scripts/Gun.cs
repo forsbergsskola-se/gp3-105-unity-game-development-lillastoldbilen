@@ -15,6 +15,10 @@ public class Gun : MonoBehaviour
     void Update()
     { 
         isShooting |= Input.GetKeyDown(KeyCode.Mouse0);
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reload();
+        }
         
         if (isShooting && magazin > 0)
         {
@@ -28,12 +32,9 @@ public class Gun : MonoBehaviour
         isShooting = false;
     }
 
-    void Reload() //UNDONE
+    public void Reload()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
             magazin = 10;
             Debug.Log("Gun is reloaded");
-        }
     }
 }
