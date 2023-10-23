@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 
@@ -10,6 +11,7 @@ public class Player : MonoBehaviour
     public Gun gun;
     public GameObject[] Inventory = new GameObject[5]; //Bag inventory is 5 "Testing 5"
     public int itemSlot = 0;
+    public UnityEvent Interaction;
     
     void Start()
     {

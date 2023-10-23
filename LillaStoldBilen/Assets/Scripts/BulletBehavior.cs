@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 public class BulletBehavior : MonoBehaviour
 {
-    public float OnscreenDelay = 001f;
+    public float OnscreenDelay = 0001f;
     public GameObject BulletFire;
     public void OnCollisionEnter(Collision other)
     {
