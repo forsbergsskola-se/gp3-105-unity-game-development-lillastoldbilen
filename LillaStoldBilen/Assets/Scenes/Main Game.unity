@@ -2210,6 +2210,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6964801355821310078, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       insertIndex: -1
       addedObject: {fileID: 822807991}
+    - targetCorrespondingSourceObject: {fileID: 6964801355821310078, guid: 21784e75583bd7847b965f9b16505160, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 822807992}
   m_SourcePrefab: {fileID: 100100000, guid: 21784e75583bd7847b965f9b16505160, type: 3}
 --- !u!1 &822807988 stripped
 GameObject:
@@ -2280,6 +2283,33 @@ MonoBehaviour:
   turnSpeed: 100
   reverseSpeed: 100
   InCar: 0
+--- !u!114 &822807992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822807988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59809023ab2140cf802683fb88a8ee8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 822807991}
+        m_TargetAssemblyTypeName: Orangecarmovement, Assembly-CSharp
+        m_MethodName: EnterCar
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1983528277}
+          m_ObjectArgumentAssemblyTypeName: PlayerController, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &935677636
 PrefabInstance:
   m_ObjectHideFlags: 0
