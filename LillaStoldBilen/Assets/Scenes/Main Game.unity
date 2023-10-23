@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2076,10 +2076,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655779d1b7ee72448bfdc6e32a7f5433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isActive: 0
-  Title: Learn the Basics
-  Description: Lets go over how to get around
-  CurrencyReward: 0
+  questName: 
+  questDescription: 
+  isAccepted: 0
 --- !u!4 &571896776
 Transform:
   m_ObjectHideFlags: 0
@@ -2681,6 +2680,8 @@ MonoBehaviour:
   turnSpeed: 50
   reverseSpeed: 30
   InCar: 0
+  followPlayer: {fileID: 0}
+  orangeCar: {fileID: 0}
 --- !u!114 &822807992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5153,11 +5154,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.55, y: 1.98, z: 1.46}
+  m_Size: {x: 1.55, y: 1.98, z: 2.18}
   m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!114 &1674425488
 MonoBehaviour:
@@ -5791,6 +5792,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5deb4341509243b2b6e9b75dfe484bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Items:
+    m_PersistentCalls:
+      m_Calls: []
   Health: 90
   MovementSpeed: 0
   onHand: {fileID: 0}

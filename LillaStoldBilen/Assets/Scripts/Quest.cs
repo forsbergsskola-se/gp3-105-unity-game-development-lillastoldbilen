@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class Quest : MonoBehaviour
 {
-    public bool isActive;
+    public string questName;
+    public string questDescription;
+    public bool isAccepted;
 
-    public string Title;
-    public string Description;
-    public int CurrencyReward;
+    public Quest(string name, string description)
+    {
+        questName = name;
+        questDescription = description;
+        isAccepted = false;
+    }
+
+    public void AcceptQuest()
+    {
+        isAccepted = true;
+    }
+    
 }
