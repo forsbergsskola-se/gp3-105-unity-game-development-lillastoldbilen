@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour
 
 {
+    public UnityEvent Items;
     public int Health = 90;
     public float MovementSpeed;
     public GameObject onHand;
