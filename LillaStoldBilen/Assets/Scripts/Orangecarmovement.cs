@@ -7,6 +7,8 @@ public class Orangecarmovement : MonoBehaviour
     public float turnSpeed = 100f;
     public float reverseSpeed = 100f;
     public bool InCar = false;
+    public FollowPlayer followPlayer;
+    public GameObject orangeCar;
 
     public void ActivateCar()
     {
@@ -22,19 +24,19 @@ public class Orangecarmovement : MonoBehaviour
         
         if (InCar)
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKey(KeyCode.W))
             {
                 transform.Translate(Vector3.forward * accelerationSpeed * Time.deltaTime);
             }
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKey(KeyCode.S))
             {
                 transform.Translate(Vector3.forward * -reverseSpeed * Time.deltaTime);
             }
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKey(KeyCode.A))
             {
                 transform.Rotate(Vector3.up, -turnSpeed * Time.deltaTime);
             }
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKey(KeyCode.D))
             {
                 transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
             }
@@ -47,12 +49,17 @@ public class Orangecarmovement : MonoBehaviour
         
         //transform.position = transform.position;
         //transform.rotation = transform.rotation;
+        
+        // here, undo everything you've done in EnterCar
     }
     
     public void EnterCar(PlayerController playerController)
     {
         playerController.gameObject.SetActive(false);
         InCar = true;
+        // reference followPlayer script
+        followPlayer.player = orangeCar;
+        // thatScript.player = this.gameObject;
     } 
         
 }
