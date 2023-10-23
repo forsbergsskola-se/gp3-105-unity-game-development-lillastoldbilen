@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 451203334169730916}
   - component: {fileID: 8537869087032518145}
   - component: {fileID: 7383560671408311642}
+  - component: {fileID: -7170429614549403323}
+  - component: {fileID: -1040061527784471335}
   m_Layer: 0
   m_Name: Bottle
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +85,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-7170429614549403323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390328402356661231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7872a9fe332ea4e9c37d4b7c316a5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bottleHP: 20
+--- !u!114 &-1040061527784471335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390328402356661231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59809023ab2140cf802683fb88a8ee8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
