@@ -8,6 +8,11 @@ public class Orangecarmovement : MonoBehaviour
     public float reverseSpeed = 100f;
     public bool InCar = false;
 
+    public void ActivateCar()
+    {
+        
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && InCar)
@@ -34,10 +39,7 @@ public class Orangecarmovement : MonoBehaviour
                 transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
             }
         }
-        else
-        {
-            
-        }
+       
     }
 
     public void ExitCar()
@@ -46,6 +48,7 @@ public class Orangecarmovement : MonoBehaviour
         //transform.position = transform.position;
         //transform.rotation = transform.rotation;
     }
+    
     public void EnterCar(PlayerController playerController)
     {
         playerController.gameObject.SetActive(false);
