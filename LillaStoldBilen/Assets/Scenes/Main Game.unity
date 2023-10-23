@@ -2134,6 +2134,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6964801355821310078, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       insertIndex: -1
       addedObject: {fileID: 822807989}
+    - targetCorrespondingSourceObject: {fileID: 6964801355821310078, guid: 21784e75583bd7847b965f9b16505160, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 822807991}
   m_SourcePrefab: {fileID: 100100000, guid: 21784e75583bd7847b965f9b16505160, type: 3}
 --- !u!1 &822807988 stripped
 GameObject:
@@ -2159,7 +2162,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: -2.03, y: 1.84, z: 3.74}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &822807990
 Rigidbody:
@@ -2188,6 +2191,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &822807991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822807988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4cf12f532e8bba4483604d61010dbf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accelerationSpeed: 100
+  turnSpeed: 100
+  reverseSpeed: 100
+  InCar: 0
 --- !u!1001 &935677636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4336,7 +4355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9555aafe4354dbf8998689e14b5cddf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 571896775}
+  quest: {fileID: 0}
   player: {fileID: 1983528269}
 --- !u!65 &1674425487
 BoxCollider:
