@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    public float interactionRange = 2.0f;
+    public float interactionRange = 5.0f;
 
     void Update()
     {
