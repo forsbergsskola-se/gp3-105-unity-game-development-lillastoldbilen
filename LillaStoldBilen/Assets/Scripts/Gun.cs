@@ -18,7 +18,7 @@ public class Gun : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.R))
         {
-            Invoke("Reload", 5); // Reload Cooldown
+            Invoke("Reload", 2); // Reload Cooldown
         }
         
         if (isShooting && magazin > 0)

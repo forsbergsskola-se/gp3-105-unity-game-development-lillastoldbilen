@@ -27,7 +27,12 @@ public class Player : MonoBehaviour
 
     public void ItemToggle() // To toggle items in possession
     {
-        onHand = Inventory[itemSlot+ 1];
+        if (Inventory[4])
+        {
+            onHand = Inventory[0];
+        }
+        else
+            onHand = Inventory[itemSlot+ 1];
         Debug.Log(onHand);
     }
 
