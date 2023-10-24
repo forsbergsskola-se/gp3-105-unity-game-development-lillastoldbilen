@@ -11,7 +11,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     void Start()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
     }
 
     void Update()

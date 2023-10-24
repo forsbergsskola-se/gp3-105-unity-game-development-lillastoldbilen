@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-            // enter car
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         Vector3 localForward = transform.forward;
