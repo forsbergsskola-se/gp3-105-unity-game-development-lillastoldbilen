@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class PlayerBehavior : MonoBehaviour
+{
+    public GameObject itemInHand;
+    public Dollar dollar;
+    public Player player;
+    void Update()
+    {
+        RaycastHit hit; // When player gets close enough of item, player picks it up
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 2.0f) == FindObjectOfType<Item>())
+        {
+            if (hit.collider.CompareTag("Item")) //
+            {
+                if (hit.collider.gameObject == FindFirstObjectByType<Dollar>())
+                {
+                    player.MoneyBag += dollar.dollar;
+                    Destroy(this.dollar);
+                }
+                
+                for (int i = 0; i < player.InHands.Length; i++)
+                {
+                    if (player.InHands[i] != null)
+                    {
+                        player.InHands[i] = hit.collider.gameObject;
+                        Debug.Log($"Picked up {hit.collider.CompareTag("Item")}");
+                        break;
+                    }
+                    Debug.Log("Your hands are full!");
+                }
+            }
+            
+        }
+    }
+}

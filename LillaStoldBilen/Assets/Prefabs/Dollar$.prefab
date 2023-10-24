@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1600095773181548910}
   m_Layer: 0
   m_Name: Dollar$
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,6 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59809023ab2140cf802683fb88a8ee8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &-6804536651165692671
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -160,9 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a708cde1e92f09446a47aba015dadedb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnInteract:
-    m_PersistentCalls:
-      m_Calls: []
   dollar: 50
 --- !u!1 &6397761621227000825
 GameObject:
