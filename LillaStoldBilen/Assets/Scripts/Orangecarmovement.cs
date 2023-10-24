@@ -10,7 +10,7 @@ public class Orangecarmovement : MonoBehaviour
     public GameObject Player;
     public FollowPlayer followPlayer;
     public PlayerController playerController;
-    
+    public FollowPlayer spelare;
     
     public void ActivateCar()
     {
@@ -54,14 +54,16 @@ public class Orangecarmovement : MonoBehaviour
        // reset the field
        playerController.gameObject.SetActive(true);  // here, undo everything you've done in EnterCar
        InCar = false;
-       followPlayer.player = null;
+       followPlayer = spelare;
+       followPlayer.player = playerController.gameObject;
+
     }
     
     public void EnterCar(PlayerController playerController)
     {
         playerController.gameObject.SetActive(false);
         InCar = true;
-        followPlayer.player = this.gameObject;
+        followPlayer.player = this.gameObject; //Camera follows now car
         
         // save playerController to a field
         this.playerController = playerController;
