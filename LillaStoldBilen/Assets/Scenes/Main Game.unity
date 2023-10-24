@@ -2683,8 +2683,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4cf12f532e8bba4483604d61010dbf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accelerationSpeed: 30
-  turnSpeed: 50
+  accelerationSpeed: 10
+  turnSpeed: 80
   reverseSpeed: 30
   InCar: 0
   Player: {fileID: 0}
