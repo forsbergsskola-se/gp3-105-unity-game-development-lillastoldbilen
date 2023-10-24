@@ -1,4 +1,5 @@
 using Unity.VisualScripting;
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class Orangecarmovement : MonoBehaviour
@@ -10,8 +11,8 @@ public class Orangecarmovement : MonoBehaviour
     public GameObject Player;
     public FollowPlayer followPlayer;
     public PlayerController playerController;
-    public FollowPlayer spelare;
-    
+    private GameObject oldFollowTarget;
+    public GameObject exitCarSpawn;
     public void ActivateCar()
     {
         
@@ -54,18 +55,19 @@ public class Orangecarmovement : MonoBehaviour
        // reset the field
        playerController.gameObject.SetActive(true);  // here, undo everything you've done in EnterCar
        InCar = false;
-       followPlayer = spelare;
-       followPlayer.player = playerController.gameObject;
-
+       followPlayer.player = this.oldFollowTarget;
+       this.oldFollowTarget = null;
+       playerController.gameObject.transform.position = exitCarSpawn.transform.position;
     }
     
     public void EnterCar(PlayerController playerController)
     {
         playerController.gameObject.SetActive(false);
         InCar = true;
+        this.oldFollowTarget = followPlayer.player;
         followPlayer.player = this.gameObject; //Camera follows now car
         
         // save playerController to a field
         this.playerController = playerController;
-    } 
+    }
 }
