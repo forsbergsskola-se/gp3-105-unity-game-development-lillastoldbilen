@@ -4,16 +4,12 @@ using UnityEngine;
 public class QuestGiver : MonoBehaviour
 {
     public Quest quest;
-    public GameObject player = GameObject.Find("Player");
-
-    private void OnTriggerEnter(Collider other)
-    {
-        
-    }
+    public GameObject player;
 
     public void StartQuest()
     {
         Debug.Log("Start Quest", this);
+        quest.isAccepted = true;
     }
 }
 
