@@ -98,4 +98,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magazin: 10
   Bullet: {fileID: 4673442993798496741, guid: e6192f5acc762bb40b64ad79b10ba0aa, type: 3}
-  BulletSpeed: 700
+  BulletSpeed: 100

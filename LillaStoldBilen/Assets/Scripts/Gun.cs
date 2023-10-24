@@ -9,7 +9,6 @@ public class Gun : MonoBehaviour
     public int magazin = 10;
     public GameObject Bullet;
     public float BulletSpeed = 100f;
-
     private bool isShooting;
     
     void Update()
