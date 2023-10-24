@@ -1,4 +1,5 @@
 using Unity.VisualScripting;
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class Orangecarmovement : MonoBehaviour
@@ -9,7 +10,9 @@ public class Orangecarmovement : MonoBehaviour
     public bool InCar = false;
     public GameObject Player;
     public FollowPlayer followPlayer;
-
+    public PlayerController playerController;
+    private GameObject oldFollowTarget;
+    public GameObject exitCarSpawn;
     public void ActivateCar()
     {
         
@@ -46,22 +49,25 @@ public class Orangecarmovement : MonoBehaviour
 
     public void ExitCar()
     {
-        
-        //transform.position = transform.position;
-        //transform.rotation = transform.rotation;
-        
-        // here, undo everything you've done in EnterCar
-       
-        InCar = false;
+        PlayerController playerController = this.playerController;
+        this.playerController = null;
+       // get playerController from the field
+       // reset the field
+       playerController.gameObject.SetActive(true);  // here, undo everything you've done in EnterCar
+       InCar = false;
+       followPlayer.player = this.oldFollowTarget;
+       this.oldFollowTarget = null;
+       playerController.gameObject.transform.position = exitCarSpawn.transform.position;
     }
     
     public void EnterCar(PlayerController playerController)
     {
         playerController.gameObject.SetActive(false);
         InCar = true;
-
-        followPlayer.player = this.gameObject;
-        // reference followPlayer script
-        // thatScript.player = this.gameObject;
-    } 
+        this.oldFollowTarget = followPlayer.player;
+        followPlayer.player = this.gameObject; //Camera follows now car
+        
+        // save playerController to a field
+        this.playerController = playerController;
+    }
 }
