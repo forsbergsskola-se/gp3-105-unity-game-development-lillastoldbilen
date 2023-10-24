@@ -7,8 +7,8 @@ public class Orangecarmovement : MonoBehaviour
     public float turnSpeed = 100f;
     public float reverseSpeed = 100f;
     public bool InCar = false;
+    public GameObject Player;
     public FollowPlayer followPlayer;
-    public GameObject orangeCar;
 
     public void ActivateCar()
     {
@@ -17,9 +17,9 @@ public class Orangecarmovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && InCar)
+        if (Input.GetKey(KeyCode.E) && InCar)
         {
-            ExitCar(); // I will write a methode later in the code (I need to think first)
+            ExitCar(); 
         }
         
         if (InCar)
@@ -51,15 +51,17 @@ public class Orangecarmovement : MonoBehaviour
         //transform.rotation = transform.rotation;
         
         // here, undo everything you've done in EnterCar
+       
+        InCar = false;
     }
     
     public void EnterCar(PlayerController playerController)
     {
         playerController.gameObject.SetActive(false);
         InCar = true;
+
+        followPlayer.player = this.gameObject;
         // reference followPlayer script
-        followPlayer.player = orangeCar;
         // thatScript.player = this.gameObject;
     } 
-        
 }
