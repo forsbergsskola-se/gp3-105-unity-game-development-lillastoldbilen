@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     {
         if (onHand)
         {
-            UseItem(onHand); 
+            //UseItem(onHand); TODO:Fix broken code
             EquipedItem();
         }
         
