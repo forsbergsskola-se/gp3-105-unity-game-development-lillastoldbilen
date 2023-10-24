@@ -1,4 +1,4 @@
-wusing System;
+using System;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -11,5 +11,5 @@ public class Player : MonoBehaviour
     public float MovementSpeed;
     public int MoneyBag;
     public bool onHand;
-    public GameObject[] InHands = new GameObject[2];
+    public GameObject InHand = new GameObject();
 }

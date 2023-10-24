@@ -11,7 +11,7 @@ public class PlayerBehavior : MonoBehaviour
     void Update()
     {
         RaycastHit hit; // When player gets close enough of item, player picks it up
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 2.0f) == FindObjectOfType<Item>())
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 2.0f))
         {
             if (hit.collider.CompareTag("Item")) //
             {
@@ -19,18 +19,15 @@ public class PlayerBehavior : MonoBehaviour
                 {
                     player.MoneyBag += dollar.dollar;
                     Destroy(this.dollar);
+                    return;
                 }
                 
-                for (int i = 0; i < player.InHands.Length; i++)
+                if (player.InHand != null)
                 {
-                    if (player.InHands[i] != null)
-                    {
-                        player.InHands[i] = hit.collider.gameObject;
-                        Debug.Log($"Picked up {hit.collider.CompareTag("Item")}");
-                        break;
-                    }
-                    Debug.Log("Your hands are full!");
+                    player.InHand = hit.collider.gameObject; Debug.Log($"Picked up {hit.collider.CompareTag("Item")}");
                 }
+                Debug.Log("Your hands are full!");
+                
             }
             
         }
