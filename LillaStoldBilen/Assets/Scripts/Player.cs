@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            UseItem(onHand);
+            // UseItem(onHand); TODO: Fix code by angelo
         }
             
         
