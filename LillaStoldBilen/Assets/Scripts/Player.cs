@@ -8,20 +8,27 @@ public class Player : MonoBehaviour
 
 {
     public int Health = 90;
-    public bool isAlive = true;
     public float MovementSpeed;
     public int MoneyBag;
-    public bool onHand;
-    public GameObject InHand = new GameObject();
+    public GameObject[] hands = new GameObject[2];
 
-    void Update()
+    public void CashIn(int money)
     {
-        CheckAlive();
+        MoneyBag += money;
     }
-    
-    private void CheckAlive()
+
+    public void PickUpItem(GameObject item)
     {
-        if (Health > 0)
-            isAlive = false;
+        for (int i = 0; i < hands.Length; i++)
+        {
+            if (hands[i] != null)
+            {
+                hands[i] = item;
+                Debug.Log($"Collected {item}");
+                return;
+            }
+            else
+                Debug.Log("Your hands are full!");
+        }
     }
 }
