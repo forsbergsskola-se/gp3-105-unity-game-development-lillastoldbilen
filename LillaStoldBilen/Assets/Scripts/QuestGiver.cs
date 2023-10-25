@@ -1,15 +1,15 @@
-using System;
 using UnityEngine;
 
 public class QuestGiver : MonoBehaviour
 {
     public Quest quest;
-    public GameObject player;
-
-    public void StartQuest()
+    public Player player;
+    void Update()
     {
-        Debug.Log("Start Quest", this);
-        quest.isAccepted = true;
+        if (player)
+        {
+            quest.StartQuest();
+        }
     }
 }
 

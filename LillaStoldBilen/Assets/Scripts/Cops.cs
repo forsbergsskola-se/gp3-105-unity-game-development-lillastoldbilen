@@ -1,12 +1,14 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Cops : MonoBehaviour
 {
     public int Health = 150;
     public float MovementSpeed;
+    public UnityEvent OnDeath;
 
-    void Update()
+    private void OnDestroy()
     {
-        // if health < 1 and quest accepted then quest cop killed = true
+        this.OnDeath.Invoke();
     }
 }
