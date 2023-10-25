@@ -11,30 +11,5 @@ public class Player : MonoBehaviour
     public float MovementSpeed;
     public int MoneyBag;
     public bool onHand;
-    void Update()
-    {
-        if (onHand)
-        {
-            //UseItem(onHand); TODO:Fix broken code
-            EquipedItem();
-        }
-        
-        
-        
-        
-        //For item-pick ups (Unfinished!)
-        /*RaycastHit hit; 
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 2.0f) == FindObjectOfType<Item>())
-        
-        {
-                Item itemToPickUp = hit.collider.GetComponent<Item>();
-                Debug.Log($"Picked up {FindObjectOfType<Item>()}");
-            
-        }
-        */
-    }
-
-    public void EquipedItem()
-    {
-    }
+    public GameObject InHand = new GameObject();
 }
