@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.Android;
 
 public class QuestGiver : MonoBehaviour
 {
@@ -8,7 +6,7 @@ public class QuestGiver : MonoBehaviour
     public Player player;
     void Update()
     {
-        if ()
+        if (player)
         {
             quest.StartQuest();
         }
