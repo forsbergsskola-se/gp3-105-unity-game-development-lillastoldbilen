@@ -1,15 +1,17 @@
 using System;
 using UnityEngine;
+using UnityEngine.Android;
 
 public class QuestGiver : MonoBehaviour
 {
     public Quest quest;
-    public GameObject player;
-
-    public void StartQuest()
+    public Player player;
+    void Update()
     {
-        Debug.Log("Start Quest", this);
-        quest.isAccepted = true;
+        if ()
+        {
+            quest.StartQuest();
+        }
     }
 }
 
