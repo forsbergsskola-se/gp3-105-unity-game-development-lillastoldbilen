@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2314,6 +2314,8 @@ MonoBehaviour:
   InCar: 0
   Player: {fileID: 0}
   followPlayer: {fileID: 963194230}
+  playerController: {fileID: 0}
+  exitCarSpawn: {fileID: 0}
 --- !u!114 &822807992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3883,6 +3885,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100166, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1983528288}
+    - targetCorrespondingSourceObject: {fileID: 100166, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1983528289}
   m_SourcePrefab: {fileID: 100100000, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
 --- !u!1 &1331039164
 GameObject:
@@ -5141,9 +5146,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 90
+  isAlive: 1
   MovementSpeed: 0
   MoneyBag: 0
-  inventory: []
+  onHand: 0
+  InHand: {fileID: 0}
 --- !u!114 &1983528288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5157,6 +5164,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+--- !u!114 &1983528289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983528269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 926c558d64aeff74ca67d66f4c8d3f05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemInHand: {fileID: 0}
+  dollar: {fileID: 0}
+  player: {fileID: 1983528286}
 --- !u!1 &1990653331 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100166, guid: 8fa2a9d0520e5304190570b9b32fff5a, type: 3}
@@ -5602,9 +5624,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialPopUp
       objectReference: {fileID: 0}
+    - target: {fileID: 561693514371953910, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 988840741582289067, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 3.3817139
+      value: 3.38171
       objectReference: {fileID: 0}
     - target: {fileID: 8765743438871984834, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
       propertyPath: m_Pivot.x
