@@ -959,9 +959,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655779d1b7ee72448bfdc6e32a7f5433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAccepted: 0
-  copKilled: 0
-  questLabel: {fileID: 357454970}
+  QuestStartedEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 357454972}
+        m_TargetAssemblyTypeName: QuestUI, Assembly-CSharp
+        m_MethodName: UpdateUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  CopKilledEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 357454972}
+        m_TargetAssemblyTypeName: QuestUI, Assembly-CSharp
+        m_MethodName: UpdateUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &344466205
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1191,7 @@ GameObject:
   - component: {fileID: 357454969}
   - component: {fileID: 357454971}
   - component: {fileID: 357454970}
+  - component: {fileID: 357454972}
   m_Layer: 5
   m_Name: QuestLabel
   m_TagString: Untagged
@@ -1287,6 +1315,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357454968}
   m_CullTransparentMesh: 1
+--- !u!114 &357454972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357454968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3cdf489141d463e993d2f99a8619e25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 357454970}
+  quest: {fileID: 311986357}
 --- !u!1 &379126591
 GameObject:
   m_ObjectHideFlags: 0
@@ -4831,7 +4873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quest: {fileID: 311986357}
-  player: {fileID: 1983528269}
+  player: {fileID: 1983528286}
 --- !u!65 &1674425487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5414,6 +5456,7 @@ MonoBehaviour:
   MovementSpeed: 0
   MoneyBag: 0
   onHand: 0
+  InHand: {fileID: 0}
 --- !u!114 &1983528288
 MonoBehaviour:
   m_ObjectHideFlags: 0
