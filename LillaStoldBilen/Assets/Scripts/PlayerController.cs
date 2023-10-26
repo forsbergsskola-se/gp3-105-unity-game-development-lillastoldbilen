@@ -14,8 +14,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody>();
-        playerHealth.GetComponent<PlayerHealth>();
-        
     }
     
     void Update()
