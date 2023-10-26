@@ -28,6 +28,7 @@ public class Bottle_Behavior : MonoBehaviour
         if (other.gameObject.name == "Player")
         {
             Player player = other.gameObject.GetComponent<Player>();
+            
             Transform handTransform = player.OnHand();
             
             transform.SetParent(handTransform);
