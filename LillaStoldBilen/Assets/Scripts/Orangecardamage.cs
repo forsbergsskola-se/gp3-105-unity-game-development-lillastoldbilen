@@ -7,27 +7,33 @@ public class Orangecardamage : MonoBehaviour
 {
     public float maxHealthForOrangeCar = 50f;
     public float damageAmount = 10f;
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    //public void TakeDamage;
-    
+    public void TakeDamage(float amount)
+    {
+        this.maxHealthForOrangeCar -= amount;
+    }
 
 
-    //private void OnCollisionEnter(Collision other)
-    
-        //Debug.Log($"I collided with {other.gameObject} with an impulse of {other.impulse.magnitude}");
-        //if (other.impulse.magnitude >= 1)
+
+    private void OnCollisionEnter(Collision other)
+    {
+
+        Debug.Log($"I collided with {other.gameObject} with an impulse of {other.impulse.magnitude}");
+        if (other.impulse.magnitude >= 1)
         {
-            //TakeDamage(damageAmount);//
+            TakeDamage(damageAmount);
         }
     }
+}
 
