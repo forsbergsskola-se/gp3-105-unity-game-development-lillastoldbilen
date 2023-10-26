@@ -13,10 +13,10 @@ public class Orangecardamage : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    void Update();
+    private void takeDamage;
+    
+
 
     private void OnCollisionEnter(Collision other)
     {
@@ -24,8 +24,7 @@ public class Orangecardamage : MonoBehaviour
 
         if (other.impulse.magnitude >= 1)
         {
-            
+            TakeDamage(damageAmount);
         }
-                
     }
 }
