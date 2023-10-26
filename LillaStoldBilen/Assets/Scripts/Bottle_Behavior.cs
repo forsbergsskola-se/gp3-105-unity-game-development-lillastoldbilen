@@ -28,8 +28,11 @@ public class Bottle_Behavior : MonoBehaviour
         if (other.gameObject.name == "Player")
         {
             Player player = other.gameObject.GetComponent<Player>();
-            Transform handTransform = player.GetHandTransform();
+            
+            Transform handTransform = player.OnHand();
+            
             transform.SetParent(handTransform);
+            
             transform.localPosition = Vector3.zero;
             transform.localRotation = quaternion.identity;
             Destroy(this.gameObject.GetComponent<Rigidbody>());
