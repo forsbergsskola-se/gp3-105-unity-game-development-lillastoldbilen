@@ -1,17 +1,11 @@
-using System;
-using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Serialization;
+
 
 public class Player : MonoBehaviour
 
 { 
-    public Transform rightHand;
-    public Transform leftHand;
-    
-    public Transform bag;
+    public Hand rightHand;
+    public Hand leftHand;
     
     public int Health = 90;
     public float MovementSpeed;
@@ -28,37 +22,23 @@ public class Player : MonoBehaviour
         MoneyBag += money;
     }
 
-    public Transform OnHand()
+    public Hand GetHand()
     {
-        if (rightHand.childCount == 0) 
-            return rightHand;
-        if (leftHand.childCount == 0)
-            return leftHand;
-        
+        if(!leftHand.equippedItem) return leftHand;
+        if(!rightHand.equippedItem) return rightHand;
         Debug.Log("Your hands are full!");
         return null;
     }
 
     public void Toggle()
     {
-        bag = rightHand;
-        
-        rightHand = leftHand;
-
-        leftHand = bag;
+  
     }
 }
 
 
 
-/*
-class Hand
-     public GameObject equippedItem;
-     
-    public void Equip(Gameobject item)
-    public void Unequip()
-    public bool HasEquippedItem()
-*/
+
 
 
 /*

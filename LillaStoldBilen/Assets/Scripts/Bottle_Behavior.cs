@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public class Bottle_Behavior : MonoBehaviour
 {
+    public UnityEvent onPickedUp;
     public int bottleHP = 20;
     private int RotationSpeed = 100;
     private Transform bottleTransform;
@@ -20,22 +19,10 @@ public class Bottle_Behavior : MonoBehaviour
     {
         bottleTransform.Rotate(RotationSpeed * Time.deltaTime, 0, 0);
     }
-    
-    
 
-    public void OnCollisionEnter(Collision other) //When player collects
+    public void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.name == "Player")
-        {
-            Player player = other.gameObject.GetComponent<Player>();
-            
-            Transform handTransform = player.OnHand();
-            
-            transform.SetParent(handTransform);
-            
-            transform.localPosition = Vector3.zero;
-            transform.localRotation = quaternion.identity;
-            Destroy(this.gameObject.GetComponent<Rigidbody>());
-        }
+        onPickedUp.Invoke();
     }
+
 }

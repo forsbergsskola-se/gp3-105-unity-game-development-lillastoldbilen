@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2413,11 +2413,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 731411082}
   m_Mesh: {fileID: -6614924216770288326, guid: 3c7d5dece75cf9845ad850601668e7d8, type: 3}
---- !u!1 &751434996 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100014, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
-  m_PrefabInstance: {fileID: 1317839981}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &751434997 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400014, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
@@ -4149,7 +4144,10 @@ PrefabInstance:
       addedObject: {fileID: 1983528288}
     - targetCorrespondingSourceObject: {fileID: 100166, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1983528291}
+      addedObject: {fileID: 1983528294}
+    - targetCorrespondingSourceObject: {fileID: 100166, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1983528295}
   m_SourcePrefab: {fileID: 100100000, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
 --- !u!1 &1331039164
 GameObject:
@@ -4414,11 +4412,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 12644502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1417682249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100168, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
-  m_PrefabInstance: {fileID: 1317839981}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1417682250 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400168, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
@@ -5461,7 +5454,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightHand: {fileID: 1417682250}
   leftHand: {fileID: 751434997}
-  bag: {fileID: 0}
   Health: 90
   MovementSpeed: 0
   MoneyBag: 0
@@ -5478,7 +5470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
---- !u!114 &1983528291
+--- !u!114 &1983528294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5487,12 +5479,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1983528269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5cf1720abcbcfb4a8c5eef1a07d3f0c, type: 3}
+  m_Script: {fileID: 11500000, guid: e1ab430091174eab82780bf90f7eb25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rightHand: {fileID: 1417682249}
-  leftHand: {fileID: 751434996}
-  currentItem: {fileID: 0}
+  equippedItem: {fileID: 0}
+--- !u!114 &1983528295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983528269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23cf86395e7b488fbfbc3b9ccab95c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1990653331 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100166, guid: 8fa2a9d0520e5304190570b9b32fff5a, type: 3}

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -1040061527784471335}
   - component: {fileID: -6163880514739750626}
   - component: {fileID: 6785358934812918519}
+  - component: {fileID: -6273290340856104235}
   m_Layer: 0
   m_Name: Bottle
   m_TagString: Item
@@ -99,6 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e7872a9fe332ea4e9c37d4b7c316a5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickedUp:
+    m_PersistentCalls:
+      m_Calls: []
   bottleHP: 20
 --- !u!114 &-1040061527784471335
 MonoBehaviour:
@@ -164,3 +168,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1794747, y: 0.20961224, z: 0.18152966}
   m_Center: {x: -0.28485382, y: 0.0011259292, z: 0.0016953166}
+--- !u!114 &-6273290340856104235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390328402356661231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23cf86395e7b488fbfbc3b9ccab95c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
