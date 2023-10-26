@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1478,11 +1478,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 12644502}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!4 &384107062 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400034, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
-  m_PrefabInstance: {fileID: 1317839981}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410507356
 GameObject:
   m_ObjectHideFlags: 0
@@ -2994,6 +2989,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2444027382982683311, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 5041045129552243809, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5366,7 +5365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5deb4341509243b2b6e9b75dfe484bfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handTransform: {fileID: 384107062}
+  handTransform: {fileID: 0}
   Health: 90
   MovementSpeed: 0
   MoneyBag: 0
@@ -5839,6 +5838,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 3.38171
       objectReference: {fileID: 0}
+    - target: {fileID: 2411358159619096036, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8765743438871984834, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5950,8 +5953,8 @@ SceneRoots:
   - {fileID: 531987127}
   - {fileID: 1627362646}
   - {fileID: 1053082441}
-  - {fileID: 1017852556}
   - {fileID: 2103141569}
+  - {fileID: 1017852556}
   - {fileID: 1876127136}
   - {fileID: 149474924}
   - {fileID: 109806265}
