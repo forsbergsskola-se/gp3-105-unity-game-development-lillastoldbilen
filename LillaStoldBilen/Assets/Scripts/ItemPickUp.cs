@@ -6,8 +6,6 @@ public class ItemPickUp : MonoBehaviour
     private void Start()
     { 
         Bottle_Behavior bottleBehavior = GetComponent<Bottle_Behavior>();
-
-        bottleBehavior.onPickedUp.AddListener(OnPickUp);
     }
     public void OnPickUp()
     {
