@@ -12,7 +12,8 @@ public class Hand : MonoBehaviour
                 
         item.transform.localPosition = Vector3.zero;
         item.transform.localRotation = quaternion.identity;
-        Destroy(item.GetComponent<Rigidbody>());
+        item.GetComponent<Rigidbody>().isKinematic = true;
+        this.equippedItem = item;
     }
 
     public void UnEquip()
@@ -22,7 +23,7 @@ public class Hand : MonoBehaviour
 
     public bool HasEquippedItem()
     {
-        return true;
+        return this.equippedItem != null;
     }
 
 }

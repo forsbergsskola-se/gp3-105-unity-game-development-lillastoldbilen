@@ -6,8 +6,6 @@ public class Player : MonoBehaviour
 { 
     public Hand rightHand;
     public Hand leftHand;
-    
-    public int Health = 90;
     public float MovementSpeed;
     public int MoneyBag;
 
