@@ -29,11 +29,11 @@ public class Orangecarmovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.W))
             {
-                transform.Translate(Vector3.forward * accelerationSpeed * Time.deltaTime);
+                GetComponent<Rigidbody>().AddForce(transform.forward * accelerationSpeed, ForceMode.Acceleration);
             }
             if (Input.GetKey(KeyCode.S))
             {
-                transform.Translate(Vector3.forward * -reverseSpeed * Time.deltaTime);
+                GetComponent<Rigidbody>().AddForce(transform.forward * -accelerationSpeed, ForceMode.Acceleration);
             }
             if (Input.GetKey(KeyCode.A))
             {
