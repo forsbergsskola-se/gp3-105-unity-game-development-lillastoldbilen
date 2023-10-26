@@ -7,26 +7,29 @@ using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 
-{
-    public Transform handTransform;
+{ 
+    public Transform rightHand;
+    public Transform leftHand;
     
     public int Health = 90;
     public float MovementSpeed;
     public int MoneyBag;
-    public GameObject[] hands = new GameObject[2];
     
     public void CashIn(int money)
     {
         MoneyBag += money;
     }
 
-    public Transform GetHandTransform()
+    public Transform OnHand()
     {
-        return handTransform;
-    }
-    
-    public void PickUpItem(GameObject item)
-    {
-        
+        if (rightHand == null) 
+            return rightHand;
+        else if (rightHand != null)
+            return rightHand;
+        else
+        {
+            Debug.Log("Your hands are full!");
+            return null;
+        }
     }
 }
