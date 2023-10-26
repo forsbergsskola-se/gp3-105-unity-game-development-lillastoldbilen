@@ -8,7 +8,6 @@ public class Orangecarmovement : MonoBehaviour
     public float turnSpeed = 100f;
     public float reverseSpeed = 100f;
     public bool InCar = false;
-    public GameObject Player;
     public FollowPlayer followPlayer;
     public PlayerController playerController;
     private GameObject oldFollowTarget;
