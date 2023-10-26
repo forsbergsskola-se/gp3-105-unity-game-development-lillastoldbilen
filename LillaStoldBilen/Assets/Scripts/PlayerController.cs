@@ -1,4 +1,5 @@
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -8,12 +9,15 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody playerRigidbody;
     public bool OnEnable { get; set; }
+    private PlayerHealth playerHealth;
 
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody>();
+        playerHealth.GetComponent<PlayerHealth>();
+        
     }
-
+    
     void Update()
     {
         float vertical = Input.GetAxisRaw("Vertical");
@@ -24,5 +28,6 @@ public class PlayerController : MonoBehaviour
         Quaternion deltaRotation = quaternion.Euler(rotation);
         playerRigidbody.MoveRotation(playerRigidbody.rotation * deltaRotation);
     }
+    
 
 }
