@@ -7,25 +7,14 @@ public class Orangecardamage : MonoBehaviour
 {
     public float maxHealthForOrangeCar = 50f;
     public float damageAmount = 10f;
-
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+    
     public void TakeDamage(float amount)
     {
         this.maxHealthForOrangeCar -= amount;
     }
-
-
-
+  
+        
+        
     private void OnCollisionEnter(Collision other)
     {
 
