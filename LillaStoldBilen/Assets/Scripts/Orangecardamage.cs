@@ -1,20 +1,42 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Orangecardamage : MonoBehaviour
 {
+    
     public float maxHealthForOrangeCar = 50f;
     public float damageAmount = 10f;
-    
-    public void TakeDamage(float amount)
+    public float orangeCarCurrentHealth;
+    public bool isCarDestroyed;
+
+    private void Start()
     {
-        this.maxHealthForOrangeCar -= amount;
+        orangeCarCurrentHealth = maxHealthForOrangeCar;
     }
-  
-        
-        
+
+    private void TakeDamage(float amount)
+    {
+        this.orangeCarCurrentHealth -= amount;
+        if (orangeCarCurrentHealth <= 0)
+        {
+            isCarDestroyed = true;
+            PlayerPunishment();
+        }
+    } 
+    
+
+    void PlayerPunishment()
+    {
+        Orangecarmovement car = GetComponent<Orangecarmovement>();
+        if (car.InCar)
+        {
+            // remove some health from the player
+            // remove the player from the car
+            // and make sure that they cannot enter the car again
+            Debug.Log("punishplayer");
+        }
+    } 
+
     private void OnCollisionEnter(Collision other)
     {
 
@@ -24,5 +46,7 @@ public class Orangecardamage : MonoBehaviour
             TakeDamage(damageAmount);
         }
     }
+    
 }
+
 

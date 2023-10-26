@@ -3,6 +3,12 @@ using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
 {
+    private void Start()
+    { 
+        Bottle_Behavior bottleBehavior = GetComponent<Bottle_Behavior>();
+
+        bottleBehavior.onPickedUp.AddListener(OnPickUp);
+    }
     public void OnPickUp()
     {
         void OnCollisionEnter(Collision other)
@@ -14,7 +20,6 @@ public class ItemPickUp : MonoBehaviour
             if (hand != null && hand.HasEquippedItem() == false)
             {
                 hand.Equip(this.gameObject);
-     
             }
             
         }

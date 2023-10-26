@@ -20,7 +20,7 @@ public class Bottle_Behavior : MonoBehaviour
         bottleTransform.Rotate(RotationSpeed * Time.deltaTime, 0, 0);
     }
 
-    public void OnCollisionEnter(Collision other)
+    public void OnPickup()
     {
         onPickedUp.Invoke();
     }
