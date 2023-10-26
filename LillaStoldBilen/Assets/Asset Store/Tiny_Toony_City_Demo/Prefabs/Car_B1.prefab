@@ -417,6 +417,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  quest: {fileID: 0}
 --- !u!114 &5952803295355731361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -430,6 +431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthForOrangeCar: 50
+  damageAmount: 10
 --- !u!1 &7403953081351002209
 GameObject:
   m_ObjectHideFlags: 0
