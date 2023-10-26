@@ -4,12 +4,11 @@ public class QuestGiver : MonoBehaviour
 {
     public Quest quest;
     public Player player;
-    void Update()
+    
+    public void StartQuest()
     {
-        if (player)
-        {
-            quest.StartQuest();
-        }
+        quest.StartQuest(); //Add a invoke to InteractableObject
+
     }
 }
 
