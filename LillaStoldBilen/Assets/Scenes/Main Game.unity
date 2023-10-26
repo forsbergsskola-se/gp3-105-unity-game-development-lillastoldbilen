@@ -2989,10 +2989,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2444027382982683311, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 5041045129552243809, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3076,10 +3072,6 @@ PrefabInstance:
     - target: {fileID: 7678368480112921292, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
       propertyPath: m_Name
       value: OverWorldUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 8205932944321740978, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5829,18 +5821,6 @@ PrefabInstance:
     - target: {fileID: 561693514371953910, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
       propertyPath: m_Name
       value: TutorialPopUp
-      objectReference: {fileID: 0}
-    - target: {fileID: 561693514371953910, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 988840741582289067, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 3.38171
-      objectReference: {fileID: 0}
-    - target: {fileID: 2411358159619096036, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8765743438871984834, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
       propertyPath: m_Pivot.x
