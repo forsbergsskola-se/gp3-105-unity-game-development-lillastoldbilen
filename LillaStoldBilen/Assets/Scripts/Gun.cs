@@ -1,16 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
-
 public class Gun : MonoBehaviour
 {
     public int magazin = 10;
     public GameObject Bullet;
     public float BulletSpeed = 100f;
     private bool isShooting;
-    public Item item;
     
     void Update()
     {
