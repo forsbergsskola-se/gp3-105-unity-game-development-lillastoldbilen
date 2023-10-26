@@ -20,6 +20,9 @@ public class Dollar : MonoBehaviour
     {
         dollarTransform.Rotate(0,RotationSpeed* Time.deltaTime,0);
     }
+    
+    
+    
     public void OnCollisionEnter(Collision other) //When player collects
     {
         if (other.gameObject.name == "Player")
