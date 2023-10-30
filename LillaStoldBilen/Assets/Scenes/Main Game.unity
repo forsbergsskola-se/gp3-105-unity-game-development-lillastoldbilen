@@ -3138,14 +3138,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1983528286}
-    - target: {fileID: 4583491113180156970, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4803535039035933395, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
-      propertyPath: reloadText
-      value: 
-      objectReference: {fileID: 2117816119}
     - target: {fileID: 5041045129552243809, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3227,32 +3219,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5820158598810819424, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 1104240539}
-    - target: {fileID: 5820158598810819424, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1983528286}
-    - target: {fileID: 6718038687502225578, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
-      propertyPath: m_text
-      value: '[R] to reload!'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6718038687502225578, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
-      propertyPath: m_fontSize
-      value: 34
-      objectReference: {fileID: 0}
-    - target: {fileID: 6718038687502225578, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 34
-      objectReference: {fileID: 0}
     - target: {fileID: 7678368480112921292, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
       propertyPath: m_Name
       value: OverWorldUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 7678368480112921292, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8205932944321740978, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6164,11 +6136,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
---- !u!1 &2117816119 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4583491113180156970, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
-  m_PrefabInstance: {fileID: 1017852556}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4010394358013881618
 PrefabInstance:
   m_ObjectHideFlags: 0
