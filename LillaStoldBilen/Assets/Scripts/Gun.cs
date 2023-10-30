@@ -9,12 +9,13 @@ public class Gun : MonoBehaviour
     public GameObject Bullet;
     
     public float BulletSpeed = 100f;
-    private bool isShooting;
+
+    public Player player;
     
     void Update()
     {
-        isShooting |= Input.GetKeyDown(KeyCode.Mouse0);
-
+        if(this.gameObject)
+        
         if (Input.GetKeyDown(KeyCode.R))
         {
             Invoke("Reload", 2); // Reload Cooldown
@@ -30,8 +31,6 @@ public class Gun : MonoBehaviour
         }
         else if (magazin == 0 && isShooting)
             Debug.Log("Magazin is empty");
-
-        isShooting = false;
     }
 
     public void Reload() 
