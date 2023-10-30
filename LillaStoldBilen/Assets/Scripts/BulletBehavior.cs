@@ -10,8 +10,13 @@ public class BulletBehavior : MonoBehaviour
     public float OnscreenDelay = 0001f;
     public GameObject BulletFire;
     public void OnCollisionEnter(Collision other)
-    {
-        Destroy(this.gameObject, OnscreenDelay);
+    { 
+        Invoke("BulletBreak",1);
         GameObject bulletFire = Instantiate(BulletFire, this.transform);
+    }
+
+    private void BulletBreak()
+    {
+        Destroy(this.gameObject);
     }
 }

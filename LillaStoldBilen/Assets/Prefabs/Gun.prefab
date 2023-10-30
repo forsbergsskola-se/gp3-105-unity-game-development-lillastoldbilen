@@ -97,25 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e1e095c6ea308499beb652c603cad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onPickedUp:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -4589973894171520814}
-        m_TargetAssemblyTypeName: Gun, Assembly-CSharp
-        m_MethodName: OnPickup
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   magazin: 10
   Bullet: {fileID: 4673442993798496741, guid: e6192f5acc762bb40b64ad79b10ba0aa, type: 3}
-  BulletSpeed: 100
-  player: {fileID: 0}
+  BulletSpeed: 59.1
 --- !u!114 &4257553291933853069
 MonoBehaviour:
   m_ObjectHideFlags: 0
