@@ -22,7 +22,7 @@ public class PlayerInteract : MonoBehaviour
             InteractableObject interactable = hit.collider.GetComponent<InteractableObject>();
             if (interactable != null)
             {
-                interactable.Interact();
+                interactable.Interact(this);
             }
         }
     }
