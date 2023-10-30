@@ -4,7 +4,7 @@ using UnityEngine;
 public class ItemPickUp : MonoBehaviour
 {
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         Player player = other.gameObject.GetComponent<Player>();
         if (player == null) return;
@@ -15,4 +15,5 @@ public class ItemPickUp : MonoBehaviour
             hand.Equip(this.gameObject);
         }
     }
+    
 }
