@@ -17,11 +17,6 @@ public class RiksdalerCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            count += 1;
-            PlayerPrefs.SetInt("amount", count);
-        }
-        text.text = "" + count;
+        text.text = "$" + count;
     }
 }
