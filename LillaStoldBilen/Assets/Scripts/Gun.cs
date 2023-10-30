@@ -3,8 +3,6 @@ using UnityEngine.Events;
 
 public class Gun : MonoBehaviour
 {
-    public UnityEvent onPickedUp;
-    
     public int magazin = 10;
     public GameObject Bullet;
     
@@ -13,7 +11,8 @@ public class Gun : MonoBehaviour
     
     void Update()
     {
-        
+        isShooting |= Input.GetKeyDown(KeyCode.Mouse0);
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             Invoke("Reload", 2); // Reload Cooldown
@@ -29,15 +28,13 @@ public class Gun : MonoBehaviour
         }
         else if (magazin == 0 && isShooting)
             Debug.Log("Magazin is empty");
+
+        isShooting = false;
     }
 
     public void Reload() 
     { 
         magazin = 10; 
         Debug.Log("Gun is reloaded"); 
-    }
-    public void OnPickup()
-    {
-        onPickedUp.Invoke();
     }
 }
