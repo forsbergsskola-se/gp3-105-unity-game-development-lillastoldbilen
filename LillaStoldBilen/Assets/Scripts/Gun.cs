@@ -9,12 +9,10 @@ public class Gun : MonoBehaviour
     public GameObject Bullet;
     
     public float BulletSpeed = 100f;
-
-    public Player player;
+    private bool isShooting;
     
     void Update()
     {
-        if(this.gameObject)
         
         if (Input.GetKeyDown(KeyCode.R))
         {
