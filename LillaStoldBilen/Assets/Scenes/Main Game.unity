@@ -3101,7 +3101,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1950750141157323262, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
       propertyPath: m_text
-      value: $
+      value: Money
       objectReference: {fileID: 0}
     - target: {fileID: 5041045129552243809, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
       propertyPath: m_Pivot.x
