@@ -6,6 +6,10 @@ using UnityEngine.UIElements;
 
 public class Fire_Damage : MonoBehaviour
 {
+    private void Update() // Fire lifespan
+    {
+        Invoke("Extinguish", 20);
+    }
 
     private void OnTriggerStay(Collider other)
     {
@@ -22,5 +26,10 @@ public class Fire_Damage : MonoBehaviour
             car.maxHealthForOrangeCar -= takenDamage;
             Debug.Log($"Cars Health {car.maxHealthForOrangeCar} damage");
         }
+    }
+
+    void Extinguish()
+    {
+        Destroy(this.gameObject);
     }
 }
