@@ -8,6 +8,7 @@ public class AmmoDisplay : MonoBehaviour
     public int ammo;
     public bool isFiring;
     public Text ammoDisplay;
+    public GameObject reloadText;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,15 @@ public class AmmoDisplay : MonoBehaviour
             isFiring = true;
             ammo--;
             isFiring = false;
+        }
+
+        if (ammo < 6)
+        {
+            reloadText.SetActive(true);
+        }
+        else
+        {
+            reloadText.SetActive(false);
         }
     }
 }
