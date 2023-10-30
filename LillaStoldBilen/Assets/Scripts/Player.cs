@@ -8,11 +8,14 @@ public class Player : MonoBehaviour
     public Hand leftHand;
     public float MovementSpeed;
     public int MoneyBag;
+    public bool Activate;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
             Toggle();
+        Activate |= Input.GetKeyDown(KeyCode.Mouse0);
+        Activate = false;
     }
     
     public void CashIn(int money) //When player is close enough, money adds to the MoneyBag
@@ -28,8 +31,9 @@ public class Player : MonoBehaviour
         return null;
     }
 
-    public void Toggle()
+    private void Toggle()
     {
         
     }
+    
 }
