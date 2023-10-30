@@ -8,10 +8,7 @@ public class QuestGiver : MonoBehaviour
     public void OnInteract(PlayerInteract playerInteract)
     {
         // sometimes invoke start quest
-        if (this.StartQuest())
-        {
-            
-        }
+
         // sometimes invoke hand in quest
     }
     
