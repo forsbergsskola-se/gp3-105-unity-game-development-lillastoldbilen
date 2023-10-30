@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class PlayerHealth : MonoBehaviour 
+using UnityEngine.Events;
+
+public class PlayerHealth : MonoBehaviour
 {
 	public float health = 100f;
 
@@ -9,5 +11,10 @@ public class PlayerHealth : MonoBehaviour
 	{
 		health -= damage;
 		Debug.Log("Health = " + health.ToString());
+	}
+
+	public void SetHealth()
+	{
+		health = health;
 	}
 }
