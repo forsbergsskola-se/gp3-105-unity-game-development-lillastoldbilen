@@ -4,7 +4,7 @@ using UnityEngine;
 public class Orangecardamage : MonoBehaviour
 {
     
-    public float maxHealthForOrangeCar = 50f;
+    public float maxHealthForOrangeCar = 100f;
     public float damageAmount = 10f;
     public float orangeCarCurrentHealth;
     public bool isCarDestroyed;
