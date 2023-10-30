@@ -1,5 +1,7 @@
 using System;
+using System.Diagnostics.Contracts;
 using DefaultNamespace;
+using Palmmedia.ReportGenerator.Core.Reporting.Builders;
 using UnityEngine;
 
 public class Orangecardamage : MonoBehaviour
@@ -30,15 +32,15 @@ public class Orangecardamage : MonoBehaviour
         Orangecarmovement car = GetComponent<Orangecarmovement>();
         if (car.InCar)
         {
-            PlayerHealth player = car.playerController.gameObject.GetComponent<PlayerHealth>(); // remove some health from the player
-            float takenDamage = 5;
+            PlayerHealth player = car.playerController.gameObject.GetComponent<PlayerHealth>();
+            float takenDamage = 5f;
             player.TakeDamage(takenDamage);
             car.ExitCar();
             // and make sure that they cannot enter the car again
             Debug.Log("punishplayer");
         }
-    } 
-
+    }
+ 
     private void OnCollisionEnter(Collision other)
     {
 

@@ -15,10 +15,6 @@ public class Orangecarmovement : MonoBehaviour
     private GameObject oldFollowTarget;
     public GameObject exitCarSpawn;
     
-    public void ActivateCar()
-    {
-        
-    }
 
     void Update()
     {
@@ -53,9 +49,7 @@ public class Orangecarmovement : MonoBehaviour
     {
         PlayerController playerController = this.playerController;
         this.playerController = null;
-       // get playerController from the field
-       // reset the field
-       playerController.gameObject.SetActive(true);  // here, undo everything you've done in EnterCar
+       playerController.gameObject.SetActive(true); 
        InCar = false;
        followPlayer.player = this.oldFollowTarget;
        this.oldFollowTarget = null;
@@ -64,6 +58,12 @@ public class Orangecarmovement : MonoBehaviour
     
     public void EnterCar(PlayerController playerController)
     {
+        Orangecardamage car = this.gameObject.GetComponent<Orangecardamage>();
+        if (car.isCarDestroyed)
+        {
+            return;
+        }
+        
         playerController.gameObject.SetActive(false);
         InCar = true;
         this.oldFollowTarget = followPlayer.player;
