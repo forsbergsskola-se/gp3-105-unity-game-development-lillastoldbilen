@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRigidbody;
     public bool OnEnable { get; set; }
     private PlayerHealth playerHealth;
+    public bool enable;
 
     void Start()
     {
