@@ -14,7 +14,6 @@ public class Bottle_Behavior : MonoBehaviour
     {
         bottleTransform = this.GetComponent<Transform>();
     }
-
     void Update()
     {
         bottleTransform.Rotate(RotationSpeed * Time.deltaTime, 0, 0);

@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public Hand leftHand;
     public float MovementSpeed;
     public int MoneyBag;
-
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
@@ -30,7 +30,9 @@ public class Player : MonoBehaviour
 
     private void Toggle()
     {
-        
+        GameObject pocket;
+        pocket = rightHand.equippedItem;
+        rightHand.equippedItem = leftHand.equippedItem;
+        leftHand.equippedItem = pocket;
     }
-    
 }

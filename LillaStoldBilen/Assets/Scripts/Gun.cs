@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class Gun : MonoBehaviour
 {
@@ -7,18 +8,18 @@ public class Gun : MonoBehaviour
     public GameObject Bullet;
     
     public float BulletSpeed = 100f;
-    private bool isShooting;
+    public bool UseThisItem;
     
     void Update()
     {
-        isShooting |= Input.GetKeyDown(KeyCode.Mouse0);
-
+        UseThisItem |= Input.GetKeyDown(KeyCode.Mouse0);
+        
         if (Input.GetKeyDown(KeyCode.R))
         {
             Invoke("Reload", 2); // Reload Cooldown
         }
 
-        if (isShooting && magazin > 0)
+        if (UseThisItem && magazin > 0)
         {
             GameObject newBullet = Instantiate(Bullet, this.transform.position + new Vector3(0, 0, 1),
                 this.transform.rotation);
@@ -26,10 +27,10 @@ public class Gun : MonoBehaviour
             BulletRB.velocity = this.transform.forward * BulletSpeed;
             magazin--;
         }
-        else if (magazin == 0 && isShooting)
+        else if (magazin == 0 && UseThisItem)
             Debug.Log("Magazin is empty");
 
-        isShooting = false;
+        UseThisItem = false;
     }
 
     public void Reload() 

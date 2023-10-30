@@ -14,6 +14,7 @@ public class Hand : MonoBehaviour
         item.transform.localRotation = quaternion.identity;
         item.GetComponent<Rigidbody>().isKinematic = true;
         this.equippedItem = item;
+        Destroy(item.GetComponent<Collider>());
     }
 
     public void UnEquip()
