@@ -17,4 +17,5 @@ public class InteractableObject : MonoBehaviour
     {
         quest.StartQuest();
     }
+    
 }
