@@ -7,9 +7,16 @@ public class QuestGiver : MonoBehaviour
 
     public void OnInteract(PlayerInteract playerInteract)
     {
-        // sometimes invoke start quest
-
-        // sometimes invoke hand in quest
+        if (!quest.IsAccepted())
+        {
+            // The quest has not been started yet, so you can initiate it.
+            StartQuest();
+        }
+        else if (quest.IsCompleted())
+        {
+            // The quest is completed, so you can allow the player to hand it in.
+            HandInQuest(playerInteract);
+        }
     }
     
     public void StartQuest()
