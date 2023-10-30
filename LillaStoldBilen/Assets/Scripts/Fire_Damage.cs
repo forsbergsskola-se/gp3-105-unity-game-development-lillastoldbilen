@@ -12,8 +12,15 @@ public class Fire_Damage : MonoBehaviour
         if (other.gameObject.name == "Player")
         {
             PlayerHealth player = other.gameObject.GetComponent<PlayerHealth>();
-            float takenDamage = 5 * Time.deltaTime;
+            float takenDamage = 10 * Time.deltaTime;
             player.TakeDamage(takenDamage);
+        }
+        else if (other.gameObject.name == "Orange car")
+        {
+            Orangecardamage car = other.gameObject.GetComponent<Orangecardamage>();
+            float takenDamage = 5 * Time.deltaTime;
+            car.maxHealthForOrangeCar -= takenDamage;
+            Debug.Log($"Cars Health {car.maxHealthForOrangeCar} damage");
         }
     }
 }
