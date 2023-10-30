@@ -1,3 +1,5 @@
+using System;
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEditor.Build.Content;
 using UnityEngine;
@@ -12,6 +14,7 @@ public class Orangecarmovement : MonoBehaviour
     public PlayerController playerController;
     private GameObject oldFollowTarget;
     public GameObject exitCarSpawn;
+    
     public void ActivateCar()
     {
         
@@ -69,4 +72,5 @@ public class Orangecarmovement : MonoBehaviour
         // save playerController to a field
         this.playerController = playerController;
     }
+    
 }

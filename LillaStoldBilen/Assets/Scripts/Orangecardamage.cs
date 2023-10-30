@@ -1,4 +1,5 @@
 using System;
+using DefaultNamespace;
 using UnityEngine;
 
 public class Orangecardamage : MonoBehaviour
@@ -6,7 +7,7 @@ public class Orangecardamage : MonoBehaviour
     
     public float maxHealthForOrangeCar = 100f;
     public float damageAmount = 10f;
-    public float orangeCarCurrentHealth;
+    private float orangeCarCurrentHealth;
     public bool isCarDestroyed;
 
     private void Start()
@@ -22,16 +23,17 @@ public class Orangecardamage : MonoBehaviour
             isCarDestroyed = true;
             PlayerPunishment();
         }
-    } 
-    
+    }
 
     void PlayerPunishment()
     {
         Orangecarmovement car = GetComponent<Orangecarmovement>();
         if (car.InCar)
         {
-            // remove some health from the player
-            // remove the player from the car
+            PlayerHealth player = car.playerController.gameObject.GetComponent<PlayerHealth>(); // remove some health from the player
+            float takenDamage = 5;
+            player.TakeDamage(takenDamage);
+            car.ExitCar();
             // and make sure that they cannot enter the car again
             Debug.Log("punishplayer");
         }
@@ -46,7 +48,6 @@ public class Orangecardamage : MonoBehaviour
             TakeDamage(damageAmount);
         }
     }
-    
 }
 
 
