@@ -12,9 +12,4 @@ public class PlayerHealth : MonoBehaviour
 		health -= damage;
 		Debug.Log("Health = " + health.ToString());
 	}
-
-	public void SetHealth()
-	{
-		health = health;
-	}
 }
