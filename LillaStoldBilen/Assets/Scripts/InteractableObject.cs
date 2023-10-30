@@ -4,13 +4,13 @@ using UnityEngine.Events;
 public class InteractableObject : MonoBehaviour
 {
 
-    public UnityEvent OnInteract;
+    public UnityEvent<PlayerInteract> OnInteract;
     public Quest quest;
     
-    public void Interact()
+    public void Interact(PlayerInteract player)
     {
         Debug.Log("Interacted with " + gameObject.name);
-        OnInteract.Invoke();
+        OnInteract.Invoke(player);
     }
 
     public void StartQuest()

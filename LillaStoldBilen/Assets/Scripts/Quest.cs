@@ -11,7 +11,8 @@ public class Quest : MonoBehaviour
     public UnityEvent CopKilledEvent;
     
     private bool isAccepted;
-    private bool copKilled; 
+    private bool copKilled;
+    public int dollarReward;
     
 
     public void StartQuest()
@@ -29,6 +30,11 @@ public class Quest : MonoBehaviour
         return this.isAccepted;
     }
 
+    public bool IsCompleted()
+    {
+        return this.copKilled;
+    }
+
     public bool GetCopKilled()
     {
         return this.copKilled;
@@ -41,5 +47,10 @@ public class Quest : MonoBehaviour
         }
         this.copKilled = true;
         this.CopKilledEvent.Invoke();
+    }
+
+    public void Finish(Player player)
+    {
+        player.CashIn(this.dollarReward);
     }
 }
