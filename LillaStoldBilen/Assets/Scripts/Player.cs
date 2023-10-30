@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
             Toggle();
     }
     
-    public void CashIn(int money)
+    public void CashIn(int money) //When player is close enough, money adds to the MoneyBag
     {
         MoneyBag += money;
     }
@@ -30,18 +30,6 @@ public class Player : MonoBehaviour
 
     public void Toggle()
     {
-  
+        
     }
 }
-
-
-
-
-
-
-/*
-void GetHand()
-   if(!leftHand.hasequippedItem) return leftHand;
-   if(!rightHand.hasequippedItem) return rightHand;
-   return null;
-*/

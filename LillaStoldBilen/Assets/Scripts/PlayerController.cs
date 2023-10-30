@@ -26,6 +26,4 @@ public class PlayerController : MonoBehaviour
         Quaternion deltaRotation = quaternion.Euler(rotation);
         playerRigidbody.MoveRotation(playerRigidbody.rotation * deltaRotation);
     }
-    
-
 }

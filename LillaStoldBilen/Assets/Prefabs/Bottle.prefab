@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8537869087032518145}
   - component: {fileID: 7383560671408311642}
   - component: {fileID: -7170429614549403323}
-  - component: {fileID: -1040061527784471335}
   - component: {fileID: -6163880514739750626}
   - component: {fileID: 6785358934812918519}
   - component: {fileID: -6273290340856104235}
@@ -103,9 +102,9 @@ MonoBehaviour:
   onPickedUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -6273290340856104235}
-        m_TargetAssemblyTypeName: ItemPickUp, Assembly-CSharp
-        m_MethodName: OnPickUp
+      - m_Target: {fileID: -7170429614549403323}
+        m_TargetAssemblyTypeName: Bottle_Behavior, Assembly-CSharp
+        m_MethodName: OnPickup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -116,22 +115,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   bottleHP: 20
---- !u!114 &-1040061527784471335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2390328402356661231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59809023ab2140cf802683fb88a8ee8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OnInteract:
-    m_PersistentCalls:
-      m_Calls: []
-  quest: {fileID: 0}
 --- !u!54 &-6163880514739750626
 Rigidbody:
   m_ObjectHideFlags: 0

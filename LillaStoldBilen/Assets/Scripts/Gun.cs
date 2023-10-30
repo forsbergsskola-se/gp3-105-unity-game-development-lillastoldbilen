@@ -3,6 +3,7 @@ public class Gun : MonoBehaviour
 {
     public int magazin = 10;
     public GameObject Bullet;
+    
     public float BulletSpeed = 100f;
     private bool isShooting;
     
@@ -27,6 +28,7 @@ public class Gun : MonoBehaviour
                 Debug.Log("Magazin is empty");
 
             isShooting = false;
+            
     }
 
     public void Reload() 
