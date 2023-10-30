@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 120240663}
   - component: {fileID: 120240662}
   - component: {fileID: 120240661}
+  - component: {fileID: 120240664}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -246,7 +247,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 120240659}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 120240664}
+        m_TargetAssemblyTypeName: ButtonActions, Assembly-CSharp
+        m_MethodName: PlayGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &120240659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,6 +454,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &120240664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120240656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d7b3b65014b31409d557b76c639bc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &128623479
 GameObject:
   m_ObjectHideFlags: 0
