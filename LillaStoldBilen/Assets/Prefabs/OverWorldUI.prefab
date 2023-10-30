@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2365609720388442089}
   - component: {fileID: 2872857095192461851}
   - component: {fileID: 1950750141157323262}
+  - component: {fileID: 5820158598810819424}
   m_Layer: 5
   m_Name: RiksDalerCount
   m_TagString: Untagged
@@ -134,6 +135,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5820158598810819424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4551343030836969104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ae39a2b29f99344813e506d722f9d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 0
+  player: {fileID: 0}
+  text: {fileID: 0}
 --- !u!1 &4583491113180156970
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 0
+  player: {fileID: 0}
   text: {fileID: 1950750141157323262}
 --- !u!1 &8226318129792640689
 GameObject:

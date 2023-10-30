@@ -25,5 +25,10 @@ public class QuestUI : MonoBehaviour
         {
             this.label.text = "Quest completed!";
         }
+        
+        if (quest.IsFinished())
+        {
+            this.label.text = "";
+        }
     }
 }

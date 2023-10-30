@@ -6,10 +6,12 @@ public class Quest : MonoBehaviour
 {
     public UnityEvent QuestStartedEvent;
     public UnityEvent CopKilledEvent;
+    public UnityEvent FinishEvent;
     
     private bool isAccepted;
     private bool copKilled;
     public int dollarReward;
+    private bool isHandedIn;
     
 
     public void StartQuest()
@@ -32,6 +34,11 @@ public class Quest : MonoBehaviour
         return this.copKilled;
     }
 
+    public bool IsFinished()
+    {
+        return isHandedIn;
+    }
+
     public bool GetCopKilled()
     {
         return this.copKilled;
@@ -48,6 +55,12 @@ public class Quest : MonoBehaviour
 
     public void Finish(Player player)
     {
-        player.CashIn(this.dollarReward);
+        if (copKilled && !isHandedIn) // Check if the quest is completed and not already handed in.
+        {
+            player.CashIn(dollarReward);
+            isHandedIn = true; // Mark the quest as handed in.
+            FinishEvent.Invoke();
+        }
+        
     }
 }

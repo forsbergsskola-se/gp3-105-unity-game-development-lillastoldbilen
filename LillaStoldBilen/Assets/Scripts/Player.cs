@@ -13,6 +13,10 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
             Toggle();
+        if (rightHand != null)
+        {
+            
+        }
     }
     
     public void CashIn(int money) //When player is close enough, money adds to the MoneyBag
@@ -28,8 +32,9 @@ public class Player : MonoBehaviour
         return null;
     }
 
-    public void Toggle()
+    private void Toggle()
     {
         
     }
+    
 }

@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Events;
+
 public class Gun : MonoBehaviour
 {
     public int magazin = 10;
@@ -9,26 +11,25 @@ public class Gun : MonoBehaviour
     
     void Update()
     {
-            isShooting |= Input.GetKeyDown(KeyCode.Mouse0);
+        isShooting |= Input.GetKeyDown(KeyCode.Mouse0);
 
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                Invoke("Reload", 2); // Reload Cooldown
-            }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Invoke("Reload", 2); // Reload Cooldown
+        }
 
-            if (isShooting && magazin > 0)
-            {
-                GameObject newBullet = Instantiate(Bullet, this.transform.position + new Vector3(0, 0, 1),
-                    this.transform.rotation);
-                Rigidbody BulletRB = newBullet.GetComponent<Rigidbody>();
-                BulletRB.velocity = this.transform.forward * BulletSpeed;
-                magazin--;
-            }
-            else if (magazin == 0 && isShooting)
-                Debug.Log("Magazin is empty");
+        if (isShooting && magazin > 0)
+        {
+            GameObject newBullet = Instantiate(Bullet, this.transform.position + new Vector3(0, 0, 1),
+                this.transform.rotation);
+            Rigidbody BulletRB = newBullet.GetComponent<Rigidbody>();
+            BulletRB.velocity = this.transform.forward * BulletSpeed;
+            magazin--;
+        }
+        else if (magazin == 0 && isShooting)
+            Debug.Log("Magazin is empty");
 
-            isShooting = false;
-            
+        isShooting = false;
     }
 
     public void Reload() 
