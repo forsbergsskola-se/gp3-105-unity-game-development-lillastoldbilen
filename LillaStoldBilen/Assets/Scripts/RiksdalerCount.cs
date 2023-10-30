@@ -17,6 +17,6 @@ public class RiksdalerCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "$" + this.dollarReward;
+        text.text = "$" + this.count;
     }
 }
