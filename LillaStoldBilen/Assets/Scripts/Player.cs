@@ -32,9 +32,14 @@ public class Player : MonoBehaviour
 
     private void Toggle()
     {
+        if (rightHand.equippedItem == null)
+        {
+            rightHand.Equip(leftHand.equippedItem);
+        }
         GameObject pocket = rightHand.equippedItem;
         rightHand.Equip(leftHand.equippedItem);
         leftHand.Equip(pocket);
+        
     }
 
 }

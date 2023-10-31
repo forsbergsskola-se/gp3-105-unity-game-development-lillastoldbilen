@@ -237,7 +237,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -255,4 +255,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnscreenDelay: 3
+  BulletDamage: 40
   BulletFire: {fileID: 1845955007268882, guid: 67a684e320da6e7439421a07e3fa265c, type: 3}

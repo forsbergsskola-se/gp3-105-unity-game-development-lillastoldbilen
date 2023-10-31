@@ -18,7 +18,7 @@ public class Hand : MonoBehaviour
 
     public void UnEquip()
     {
-        Destroy(this.equippedItem);
+        Destroy(this.gameObject);
     }
 
     public bool HasEquippedItem()
