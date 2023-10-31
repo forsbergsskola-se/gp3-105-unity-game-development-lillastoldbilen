@@ -31,9 +31,6 @@ public class Gun : MonoBehaviour
                 BulletRB.velocity = this.transform.forward * BulletSpeed;
                 magazin--;
             }
-            else if (magazin == 0 && UseThisItem)
-                Debug.Log("Magazin is empty");
-            
             UseThisItem = false;
         }
     }
