@@ -5,28 +5,24 @@ using UnityEngine.UI;
 
 public class AmmoDisplay : MonoBehaviour
 {
-    public int ammo;
     public bool isFiring;
     public Text ammoDisplay;
     public GameObject reloadText;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Gun gun;
+
 
     // Update is called once per frame
     void Update()
     {
-        ammoDisplay.text = ammo.ToString();
-        if (Input.GetMouseButtonDown(0) && !isFiring && ammo > 0)
+        ammoDisplay.text = gun.magazin.ToString();
+        if (Input.GetMouseButtonDown(0) && !isFiring && gun.magazin > 0)
         {
             isFiring = true;
-            ammo--;
+            gun.magazin--;
             isFiring = false;
         }
 
-        if (ammo < 6)
+        if (gun.magazin < 6)
         {
             reloadText.SetActive(true);
         }
