@@ -12,25 +12,28 @@ public class Gun : MonoBehaviour
     
     void Update()
     {
-        UseThisItem |= Input.GetKeyDown(KeyCode.Mouse0);
-        
-        if (Input.GetKeyDown(KeyCode.R))
+        if (this.gameObject == FindObjectOfType<Player>().rightHand.equippedItem)
         {
-            Invoke("Reload", 2); // Reload Cooldown
-        }
+            UseThisItem |= Input.GetKeyDown(KeyCode.Mouse0);
 
-        if (UseThisItem && magazin > 0)
-        {
-            GameObject newBullet = Instantiate(Bullet, this.transform.position + new Vector3(0, 0, 1),
-                this.transform.rotation);
-            Rigidbody BulletRB = newBullet.GetComponent<Rigidbody>();
-            BulletRB.velocity = this.transform.forward * BulletSpeed;
-            magazin--;
-        }
-        else if (magazin == 0 && UseThisItem)
-            Debug.Log("Magazin is empty");
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Invoke("Reload", 2); // Reload Cooldown
+            }
 
-        UseThisItem = false;
+            if (UseThisItem && magazin > 0)
+            {
+                GameObject newBullet = Instantiate(Bullet, this.transform.position + new Vector3(0, 0, 1),
+                    this.transform.rotation);
+                Rigidbody BulletRB = newBullet.GetComponent<Rigidbody>();
+                BulletRB.velocity = this.transform.forward * BulletSpeed;
+                magazin--;
+            }
+            else if (magazin == 0 && UseThisItem)
+                Debug.Log("Magazin is empty");
+            
+            UseThisItem = false;
+        }
     }
 
     public void Reload() 
