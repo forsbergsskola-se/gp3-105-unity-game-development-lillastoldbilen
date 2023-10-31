@@ -41,5 +41,4 @@ public class Player : MonoBehaviour
         leftHand.Equip(pocket);
         
     }
-
 }

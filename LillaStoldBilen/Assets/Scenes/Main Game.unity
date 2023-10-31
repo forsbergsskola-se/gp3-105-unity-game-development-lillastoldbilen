@@ -6200,18 +6200,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniMapCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4390544710968237756, guid: ef2ab873822a59c4b9e1f2d87e001b52, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4390544710968237756, guid: ef2ab873822a59c4b9e1f2d87e001b52, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4390544710968237756, guid: ef2ab873822a59c4b9e1f2d87e001b52, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8305167904875043891, guid: ef2ab873822a59c4b9e1f2d87e001b52, type: 3}
       propertyPath: m_Pivot.x
       value: 0
