@@ -386,7 +386,6 @@ MonoBehaviour:
   turnSpeed: 50
   reverseSpeed: 30
   InCar: 0
-  Player: {fileID: 0}
   followPlayer: {fileID: 0}
   playerController: {fileID: 0}
   exitCarSpawn: {fileID: 0}
@@ -432,6 +431,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthForOrangeCar: 50
   damageAmount: 10
+  isCarDestroyed: 0
+  colorChange: 0
+  meshRenderer: {fileID: 4170594513579940200}
+  destroyedMaterial: {fileID: 2100000, guid: 5fb2e49c9c88c0542ab3099042a02f57, type: 2}
 --- !u!1 &7403953081351002209
 GameObject:
   m_ObjectHideFlags: 0

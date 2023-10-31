@@ -2667,10 +2667,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orange car
       objectReference: {fileID: 0}
-    - target: {fileID: 7392817538603202505, guid: 21784e75583bd7847b965f9b16505160, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
