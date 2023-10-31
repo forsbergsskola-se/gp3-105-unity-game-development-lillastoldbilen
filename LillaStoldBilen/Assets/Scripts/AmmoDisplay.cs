@@ -18,11 +18,10 @@ public class AmmoDisplay : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !isFiring && gun.magazin > 0)
         {
             isFiring = true;
-            gun.magazin--;
             isFiring = false;
         }
 
-        if (gun.magazin < 6)
+        if (gun.magazin < 1)
         {
             reloadText.SetActive(true);
         }
