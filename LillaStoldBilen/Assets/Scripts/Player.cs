@@ -30,9 +30,9 @@ public class Player : MonoBehaviour
         return null;
     }
 
-    private void Toggle()
+    private void Toggle() //NOT DONE
     {
-        if (rightHand.equippedItem == null)
+        if (rightHand.equippedItem == null && leftHand.equippedItem != null)
         {
             rightHand.Equip(leftHand.equippedItem);
         }

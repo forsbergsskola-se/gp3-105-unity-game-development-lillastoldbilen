@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -8,10 +9,17 @@ public class Gun : MonoBehaviour
     
     public int magazin = 10;
     public GameObject Bullet;
+
+    private Transform barrel;
     
     public float BulletSpeed = 100f;
     public bool UseThisItem;
-    
+
+    private void Start()
+    {
+        barrel = transform.GetComponent<Gun>().transform;
+    }
+
     void Update()
     {
         if (this.gameObject == FindObjectOfType<Player>().rightHand.equippedItem)
@@ -25,8 +33,7 @@ public class Gun : MonoBehaviour
 
             if (UseThisItem && magazin > 0)
             {
-                GameObject newBullet = Instantiate(Bullet, this.transform.position + new Vector3(0, 0, 1),
-                    Quaternion.LookRotation(FindObjectOfType<Camera>().transform.forward));
+                GameObject newBullet = Instantiate(Bullet, barrel.position, Quaternion.LookRotation(FindObjectOfType<Camera>().transform.forward));
                 Rigidbody BulletRB = newBullet.GetComponent<Rigidbody>();
                 BulletRB.velocity = newBullet.transform.forward * BulletSpeed;
                 magazin--;
