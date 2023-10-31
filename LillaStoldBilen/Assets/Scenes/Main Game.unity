@@ -3269,6 +3269,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5429027176030110592, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5429027176030110592, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -9
+      objectReference: {fileID: 0}
     - target: {fileID: 5820158598810819424, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
       propertyPath: player
       value: 
@@ -6195,18 +6203,6 @@ PrefabInstance:
     - target: {fileID: 382638305590413706, guid: ef2ab873822a59c4b9e1f2d87e001b52, type: 3}
       propertyPath: m_Name
       value: MiniMapCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 4390544710968237756, guid: ef2ab873822a59c4b9e1f2d87e001b52, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4390544710968237756, guid: ef2ab873822a59c4b9e1f2d87e001b52, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4390544710968237756, guid: ef2ab873822a59c4b9e1f2d87e001b52, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8305167904875043891, guid: ef2ab873822a59c4b9e1f2d87e001b52, type: 3}
       propertyPath: m_Pivot.x
