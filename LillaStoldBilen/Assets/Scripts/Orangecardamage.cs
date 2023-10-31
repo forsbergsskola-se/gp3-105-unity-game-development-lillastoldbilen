@@ -43,7 +43,6 @@ public class Orangecardamage : MonoBehaviour
  
     private void OnCollisionEnter(Collision other)
     {
-
         Debug.Log($"I collided with {other.gameObject} with an impulse of {other.impulse.magnitude}");
         if (other.impulse.magnitude >= 1)
         {
