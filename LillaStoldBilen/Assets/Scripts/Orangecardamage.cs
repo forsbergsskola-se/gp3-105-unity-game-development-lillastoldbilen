@@ -10,7 +10,6 @@ public class Orangecardamage : MonoBehaviour
     public float damageAmount = 10f;
     private float orangeCarCurrentHealth;
     public bool isCarDestroyed;
-    public bool colorChange;
     public MeshRenderer meshRenderer;
     public Material destroyedMaterial;
 
