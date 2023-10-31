@@ -3,23 +3,27 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-	public float health = 100f;
-	public Player player;
+    public float health = 100f;
+    public Player player;
 
-	public void TakeDamage(float damage)
-	{
-		health -= damage;
-		Debug.Log("Health = " + health.ToString());
-	}
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+        Debug.Log("Health = " + health.ToString());
+        if (health <= 0)
+        {
+            StartCoroutine(OnDeath());
+        }
+    }
 
-	public void Death()
-	{
-		if (health < 0)
-		{
-			Destroy(GetComponent<Player>());
-		}
-	}
+    IEnumerator OnDeath()
+    {
+        Destroy(player.gameObject);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Main Game");
+    }
 }
