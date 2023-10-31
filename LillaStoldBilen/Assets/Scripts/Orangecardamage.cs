@@ -6,11 +6,14 @@ using UnityEngine;
 
 public class Orangecardamage : MonoBehaviour
 {
-    
+
     public float maxHealthForOrangeCar = 100f;
     public float damageAmount = 10f;
     private float orangeCarCurrentHealth;
     public bool isCarDestroyed;
+    public bool colorChange;
+    public MeshRenderer meshRenderer;
+    public Material destroyedMaterial;
 
     private void Start()
     {
@@ -24,6 +27,7 @@ public class Orangecardamage : MonoBehaviour
         {
             isCarDestroyed = true;
             PlayerPunishment();
+            ChangeMaterial();
         }
     }
 
@@ -40,7 +44,7 @@ public class Orangecardamage : MonoBehaviour
             Debug.Log("punishplayer");
         }
     }
- 
+
     private void OnCollisionEnter(Collision other)
     {
         Debug.Log($"I collided with {other.gameObject} with an impulse of {other.impulse.magnitude}");
@@ -49,6 +53,10 @@ public class Orangecardamage : MonoBehaviour
             TakeDamage(damageAmount);
         }
     }
-}
 
+    private void ChangeMaterial()
+    {
+        meshRenderer.material = this.destroyedMaterial;
+    }
+}
 
