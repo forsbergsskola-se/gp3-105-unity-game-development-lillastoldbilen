@@ -6,16 +6,15 @@ using UnityEngine;
 
 public class Orangecarmovement : MonoBehaviour
 {
-    public float accelerationSpeed = 100f;
-    public float turnSpeed = 100f;
-    public float reverseSpeed = 100f;
+    public float accelerationSpeed = 10f;
+    public float turnSpeed = 5f;
+    public float reverseSpeed = 10f;
     public bool InCar = false;
     public FollowPlayer followPlayer;
     public PlayerController playerController;
     private GameObject oldFollowTarget;
     public GameObject exitCarSpawn;
     
-
     void Update()
     {
         if (Input.GetKey(KeyCode.E) && InCar)

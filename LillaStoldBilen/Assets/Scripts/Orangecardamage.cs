@@ -6,12 +6,10 @@ using UnityEngine;
 
 public class Orangecardamage : MonoBehaviour
 {
-
     public float maxHealthForOrangeCar = 100f;
     public float damageAmount = 10f;
     private float orangeCarCurrentHealth;
     public bool isCarDestroyed;
-    public bool colorChange;
     public MeshRenderer meshRenderer;
     public Material destroyedMaterial;
 
