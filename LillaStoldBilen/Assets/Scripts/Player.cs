@@ -24,8 +24,8 @@ public class Player : MonoBehaviour
 
     public Hand GetHand()
     {
-        if(!leftHand.equippedItem) return leftHand;
         if(!rightHand.equippedItem) return rightHand;
+        if(!leftHand.equippedItem) return leftHand;
         Debug.Log("Your hands are full!");
         return null;
     }

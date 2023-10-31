@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6711287419975320851}
   - component: {fileID: -4589973894171520814}
   - component: {fileID: 4257553291933853069}
+  - component: {fileID: -4826607435014961327}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Item
@@ -97,9 +98,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e1e095c6ea308499beb652c603cad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPickedUp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -4589973894171520814}
+        m_TargetAssemblyTypeName: Gun, Assembly-CSharp
+        m_MethodName: OnPickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   magazin: 10
   Bullet: {fileID: 4673442993798496741, guid: e6192f5acc762bb40b64ad79b10ba0aa, type: 3}
   BulletSpeed: 59.1
+  UseThisItem: 0
 --- !u!114 &4257553291933853069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,3 +129,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cf86395e7b488fbfbc3b9ccab95c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &-4826607435014961327
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4650136875367145726}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.27402052
+  m_Center: {x: -0.0017524402, y: -0.0017354976, z: 0.11232239}

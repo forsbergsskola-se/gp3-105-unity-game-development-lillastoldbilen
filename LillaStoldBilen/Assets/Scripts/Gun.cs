@@ -3,7 +3,9 @@ using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class Gun : MonoBehaviour
-{
+{   
+    public UnityEvent onPickedUp;
+    
     public int magazin = 10;
     public GameObject Bullet;
     
@@ -40,5 +42,10 @@ public class Gun : MonoBehaviour
     { 
         magazin = 10; 
         Debug.Log("Gun is reloaded"); 
+    }
+    
+    public void OnPickup()
+    {
+        onPickedUp.Invoke();
     }
 }
