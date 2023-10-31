@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRigidbody;
     public bool OnEnable { get; set; }
     private PlayerHealth playerHealth;
-    public bool enable;
+    public bool walkingNow;
 
     void Start()
     {
@@ -19,6 +19,13 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
+        Movement();
+    }
+
+    public void Movement()
+    {
+        walkingNow = true;
+        
         float vertical = Input.GetAxisRaw("Vertical");
         playerRigidbody.velocity = transform.forward * vertical * moveSpeed;
 

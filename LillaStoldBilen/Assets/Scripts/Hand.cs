@@ -4,7 +4,6 @@ using UnityEngine;
 public class Hand : MonoBehaviour
 {
     public GameObject equippedItem;
-    
 
     public void Equip(GameObject item)
     {
@@ -19,7 +18,7 @@ public class Hand : MonoBehaviour
 
     public void UnEquip()
     {
-        
+        Destroy(this.equippedItem);
     }
 
     public bool HasEquippedItem()

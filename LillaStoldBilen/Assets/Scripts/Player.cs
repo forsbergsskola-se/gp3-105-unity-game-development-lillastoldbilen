@@ -8,11 +8,13 @@ public class Player : MonoBehaviour
     public Hand leftHand;
     public float MovementSpeed;
     public int MoneyBag;
-    
+    public bool ActiveItem;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
             Toggle();
+        
     }
     
     public void CashIn(int money) //When player is close enough, money adds to the MoneyBag
@@ -30,9 +32,9 @@ public class Player : MonoBehaviour
 
     private void Toggle()
     {
-        GameObject pocket;
-        pocket = rightHand.equippedItem;
-        rightHand.equippedItem = leftHand.equippedItem;
-        leftHand.equippedItem = pocket;
+        GameObject pocket = rightHand.equippedItem;
+        rightHand.Equip(leftHand.equippedItem);
+        leftHand.Equip(pocket);
     }
+
 }
