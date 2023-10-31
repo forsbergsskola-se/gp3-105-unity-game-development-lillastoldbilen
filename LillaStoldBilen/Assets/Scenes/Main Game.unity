@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1250,11 +1250,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 234256039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 10, y: -10}
   m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &357454970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3269,26 +3269,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5634246677015751363, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
-      propertyPath: m_MaxValue
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 5820158598810819424, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1983528286}
-    - target: {fileID: 6270265765954585532, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
-      propertyPath: m_Color.b
-      value: 0.0035154943
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270265765954585532, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
-      propertyPath: m_Color.g
-      value: 0.0035154943
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270265765954585532, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
-      propertyPath: m_Color.r
-      value: 0.745283
-      objectReference: {fileID: 0}
     - target: {fileID: 7678368480112921292, guid: 76e4712b2e2a121488e71a7b80b76f00, type: 3}
       propertyPath: m_Name
       value: OverWorldUI
@@ -6109,11 +6093,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 561693514371953910, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 988840741582289067, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 3.3817139
+      value: 3.38171
       objectReference: {fileID: 0}
     - target: {fileID: 8765743438871984834, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
       propertyPath: m_Pivot.x
@@ -6211,6 +6195,18 @@ PrefabInstance:
     - target: {fileID: 382638305590413706, guid: ef2ab873822a59c4b9e1f2d87e001b52, type: 3}
       propertyPath: m_Name
       value: MiniMapCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390544710968237756, guid: ef2ab873822a59c4b9e1f2d87e001b52, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390544710968237756, guid: ef2ab873822a59c4b9e1f2d87e001b52, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4390544710968237756, guid: ef2ab873822a59c4b9e1f2d87e001b52, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8305167904875043891, guid: ef2ab873822a59c4b9e1f2d87e001b52, type: 3}
       propertyPath: m_Pivot.x
