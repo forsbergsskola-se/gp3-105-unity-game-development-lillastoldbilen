@@ -26,9 +26,9 @@ public class Gun : MonoBehaviour
             if (UseThisItem && magazin > 0)
             {
                 GameObject newBullet = Instantiate(Bullet, this.transform.position + new Vector3(0, 0, 1),
-                    this.transform.rotation);
+                    Quaternion.LookRotation(FindObjectOfType<Camera>().transform.forward));
                 Rigidbody BulletRB = newBullet.GetComponent<Rigidbody>();
-                BulletRB.velocity = this.transform.forward * BulletSpeed;
+                BulletRB.velocity = newBullet.transform.forward * BulletSpeed;
                 magazin--;
             }
             UseThisItem = false;
