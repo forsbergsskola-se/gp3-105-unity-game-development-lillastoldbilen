@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class Equipped : MonoBehaviour
 {
     private Player player = new Player();
-    public RawImage image = new Image();
+    //public RawImage image = new RawImage();
+    public Gun gun = new Gun();
     void Update()
     {
-        if (player.rightHand.equippedItem = Gun)
+       
     }
 }

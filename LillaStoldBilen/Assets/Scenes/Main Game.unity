@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2663,6 +2663,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1983528277}
     - target: {fileID: 3592138887001480416, guid: 21784e75583bd7847b965f9b16505160, type: 3}
+      propertyPath: turnSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592138887001480416, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       propertyPath: exitCarSpawn
       value: 
       objectReference: {fileID: 1717577016}
@@ -2671,9 +2675,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194230}
     - target: {fileID: 3592138887001480416, guid: 21784e75583bd7847b965f9b16505160, type: 3}
+      propertyPath: reverseSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592138887001480416, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       propertyPath: playerController
       value: 
       objectReference: {fileID: 1983528277}
+    - target: {fileID: 3592138887001480416, guid: 21784e75583bd7847b965f9b16505160, type: 3}
+      propertyPath: accelerationSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952803295355731361, guid: 21784e75583bd7847b965f9b16505160, type: 3}
+      propertyPath: maxHealthForOrangeCar
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6268069733278782061, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.59
