@@ -2620,9 +2620,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1983528277}
     - target: {fileID: 3592138887001480416, guid: 21784e75583bd7847b965f9b16505160, type: 3}
+      propertyPath: exitCarSpawn
+      value: 
+      objectReference: {fileID: 1717577016}
+    - target: {fileID: 3592138887001480416, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       propertyPath: followPlayer
       value: 
       objectReference: {fileID: 963194230}
+    - target: {fileID: 3592138887001480416, guid: 21784e75583bd7847b965f9b16505160, type: 3}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 1983528277}
     - target: {fileID: 6268069733278782061, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.59
@@ -5207,6 +5215,11 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   quest: {fileID: 311986357}
+--- !u!1 &1717577016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4356060730044117091, guid: 21784e75583bd7847b965f9b16505160, type: 3}
+  m_PrefabInstance: {fileID: 822807987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1721993674 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8971713701178029905, guid: 797a2dbaceea962469b9774c7ed4d4af, type: 3}
@@ -5535,7 +5548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   rotateSpeed: 5
-  enable: 0
+  walkingNow: 0
 --- !u!136 &1983528281
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5588,6 +5601,7 @@ MonoBehaviour:
   leftHand: {fileID: 751434998}
   MovementSpeed: 0
   MoneyBag: 0
+  ActiveItem: 0
 --- !u!114 &1983528288
 MonoBehaviour:
   m_ObjectHideFlags: 0
