@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -4589973894171520814}
   - component: {fileID: 4257553291933853069}
   - component: {fileID: -4826607435014961327}
+  - component: {fileID: 7079896155441101715}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Item
@@ -29,14 +30,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4650136875367145726}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.26247722, y: -0.6189495, z: 0.27760613, w: -0.68625224}
+  m_LocalRotation: {x: 0.2624776, y: 0.61894804, z: -0.27760932, w: 0.68625206}
   m_LocalPosition: {x: 0.590852, y: 0.5720168, z: 0.093482584}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3645052780402245951}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 44.741, y: 82.231, z: -4.53}
 --- !u!33 &3634619133702121400
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -114,10 +115,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  reloadText: {fileID: 0}
   magazin: 10
   Bullet: {fileID: 4673442993798496741, guid: e6192f5acc762bb40b64ad79b10ba0aa, type: 3}
   barrel: {fileID: 3645052780402245951}
-  BulletSpeed: 59.1
+  BulletSpeed: 100
   UseThisItem: 0
 --- !u!114 &4257553291933853069
 MonoBehaviour:
@@ -152,6 +154,33 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.27402052
   m_Center: {x: -0.0017524402, y: -0.0017354976, z: 0.11232239}
+--- !u!54 &7079896155441101715
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4650136875367145726}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6109481178345117569
 GameObject:
   m_ObjectHideFlags: 0

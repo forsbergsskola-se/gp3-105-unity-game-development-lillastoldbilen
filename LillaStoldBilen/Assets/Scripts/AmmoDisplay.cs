@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class AmmoDisplay : MonoBehaviour
 {
     public bool isFiring;
     public Text ammoDisplay;
-    public GameObject reloadText;
+    public TMP_Text reloadText;
     public Gun gun;
 
 
@@ -23,11 +24,11 @@ public class AmmoDisplay : MonoBehaviour
 
         if (gun.magazin < 1)
         {
-            reloadText.SetActive(true);
+            reloadText.gameObject.SetActive(true);
         }
         else
         {
-            reloadText.SetActive(false);
+            reloadText.gameObject.SetActive(false);
         }
     }
 }

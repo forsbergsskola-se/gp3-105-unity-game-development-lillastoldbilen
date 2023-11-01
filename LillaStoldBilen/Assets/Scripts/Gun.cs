@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -6,7 +7,7 @@ using UnityEngine.Serialization;
 public class Gun : MonoBehaviour
 {   
     public UnityEvent onPickedUp;
-    
+    public TMP_Text reloadText;
     public int magazin = 10;
     public GameObject Bullet;
     
@@ -24,6 +25,8 @@ public class Gun : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Invoke("Reload", 2); // Reload Cooldown
+                reloadText.gameObject.SetActive(true);
+                reloadText.text = "Reloading...";
             }
 
             if (UseThisItem && magazin > 0)

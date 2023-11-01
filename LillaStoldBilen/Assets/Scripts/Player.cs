@@ -39,6 +39,5 @@ public class Player : MonoBehaviour
         GameObject pocket = rightHand.equippedItem;
         rightHand.Equip(leftHand.equippedItem);
         leftHand.Equip(pocket);
-        
     }
 }
