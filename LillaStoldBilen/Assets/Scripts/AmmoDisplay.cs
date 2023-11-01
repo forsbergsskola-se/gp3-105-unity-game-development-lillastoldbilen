@@ -24,6 +24,7 @@ public class AmmoDisplay : MonoBehaviour
 
         if (gun.magazin < 1)
         {
+            reloadText.text = "[R] to reload!";
             reloadText.gameObject.SetActive(true);
         }
         else

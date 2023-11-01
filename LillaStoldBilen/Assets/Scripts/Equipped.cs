@@ -10,7 +10,6 @@ public class Equipped : MonoBehaviour
     public Sprite sprite;
     void Update()
     {
-        FindObjectOfType<Player>().rightHand.equippedItem.gameObject.GetComponent<ItemPickUp>().Sprite;
-        this.imageComponent.sprite = sprite;
+        this.imageComponent.sprite = FindObjectOfType<Player>().rightHand.equippedItem.gameObject.GetComponent<ItemPickUp>().GetComponent<Sprite>();
     }
 }
