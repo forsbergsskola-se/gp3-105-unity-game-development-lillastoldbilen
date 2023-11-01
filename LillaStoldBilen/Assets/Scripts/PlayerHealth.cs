@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
         health -= damage;
         Debug.Log("Health = " + health.ToString());
         OnPlayerHealthChanged.Invoke(health);
-        if(health <= 0)
+        if(this.health <= 0)
             deathAnimation = true;
         deathAnimation = false;
     }
