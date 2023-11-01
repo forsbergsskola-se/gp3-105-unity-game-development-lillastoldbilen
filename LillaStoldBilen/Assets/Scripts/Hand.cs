@@ -25,5 +25,4 @@ public class Hand : MonoBehaviour
     {
         return this.equippedItem != null;
     }
-
 }
