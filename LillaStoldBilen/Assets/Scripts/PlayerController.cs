@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody playerRigidbody;
     public bool OnEnable { get; set; }
-    private PlayerHealth playerHealth;
     public bool walkingNow;
 
     void Start()
@@ -25,16 +24,11 @@ public class PlayerController : MonoBehaviour
     public void Movement()
     {
         float vertical = Input.GetAxisRaw("Vertical");
-        if (vertical == Input.GetAxisRaw("Vertical"))
-        {
-            walkingNow = true;
-        }
+        walkingNow = Mathf.Abs(vertical) > 0.01f;
         playerRigidbody.velocity = transform.forward * vertical * moveSpeed;
         float rotationinput = Input.GetAxis("Horizontal");
         Vector3 rotation = new Vector3(0, rotationinput, 0) * rotateSpeed * Time.deltaTime;
         Quaternion deltaRotation = quaternion.Euler(rotation);
         playerRigidbody.MoveRotation(playerRigidbody.rotation * deltaRotation);
-        
-        walkingNow = false;
     }
 }

@@ -5,21 +5,9 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     public Animator animator;
-    
-    public void Load()
-    {
-        StartCoroutine(Co_Load());
-    }
 
-    IEnumerator Co_Load()
+    void Update()
     {
-        if (FindObjectOfType<PlayerController>().walkingNow == true)
-        {
-            this.animator.SetBool("WhenWalking", true);
-        }
-        else if (!FindObjectOfType<PlayerController>().walkingNow)
-            this.animator.SetBool("WhenWalking", false);
-        yield return new WaitForSeconds(0);
+        this.animator.SetBool("WhenWalking",GetComponent<PlayerController>().walkingNow);
     }
 }
-
