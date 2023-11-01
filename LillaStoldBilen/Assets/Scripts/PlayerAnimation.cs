@@ -13,7 +13,7 @@ public class PlayerAnimation : MonoBehaviour
 
     IEnumerator Co_Load()
     {
-        if (FindObjectOfType<PlayerController>().walkingNow)
+        if (FindObjectOfType<PlayerController>().walkingNow == true)
         {
             this.animator.SetBool("WhenWalking", true);
         }

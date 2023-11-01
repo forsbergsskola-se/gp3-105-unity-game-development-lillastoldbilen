@@ -18,20 +18,23 @@ public class PlayerController : MonoBehaviour
     }
     
     void Update()
-    {
+    { 
         Movement();
     }
 
     public void Movement()
     {
-        walkingNow = true;
-        
         float vertical = Input.GetAxisRaw("Vertical");
+        if (vertical == Input.GetAxisRaw("Vertical"))
+        {
+            walkingNow = true;
+        }
         playerRigidbody.velocity = transform.forward * vertical * moveSpeed;
-
         float rotationinput = Input.GetAxis("Horizontal");
         Vector3 rotation = new Vector3(0, rotationinput, 0) * rotateSpeed * Time.deltaTime;
         Quaternion deltaRotation = quaternion.Euler(rotation);
         playerRigidbody.MoveRotation(playerRigidbody.rotation * deltaRotation);
+        
+        walkingNow = false;
     }
 }
