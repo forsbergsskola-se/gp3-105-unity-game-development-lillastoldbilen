@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -706,6 +706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 136917639}
+  - component: {fileID: 136917640}
   m_Layer: 0
   m_Name: GameOverUI
   m_TagString: Untagged
@@ -729,6 +730,21 @@ Transform:
   - {fileID: 1305477151}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &136917640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136917638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab03f919340484483da4fbc145bb015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 1088257809}
+  playerHealth: {fileID: 0}
+  player: {fileID: 1983528286}
 --- !u!1 &149474923
 GameObject:
   m_ObjectHideFlags: 0
@@ -3882,7 +3898,6 @@ GameObject:
   - component: {fileID: 1088257808}
   - component: {fileID: 1088257810}
   - component: {fileID: 1088257809}
-  - component: {fileID: 1088257811}
   m_Layer: 5
   m_Name: GameOverLabel
   m_TagString: Untagged
@@ -3929,7 +3944,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4006,21 +4021,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1088257807}
   m_CullTransparentMesh: 1
---- !u!114 &1088257811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088257807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ab03f919340484483da4fbc145bb015, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  label: {fileID: 1088257809}
-  playerHealth: {fileID: 1988601844}
-  player: {fileID: 1983528286}
 --- !u!1 &1089679448
 GameObject:
   m_ObjectHideFlags: 0
@@ -6223,6 +6223,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f95d135d1a58d41823369d45f13f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnPlayerHealthChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 136917640}
+        m_TargetAssemblyTypeName: GameOverUI, Assembly-CSharp
+        m_MethodName: UpdateUI
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 44
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   health: 100
   player: {fileID: 1983528286}
 --- !u!114 &1983528290
@@ -6240,52 +6255,6 @@ MonoBehaviour:
   count: 0
   player: {fileID: 1983528286}
   text: {fileID: 1104240539}
---- !u!1 &1988601843
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1988601845}
-  - component: {fileID: 1988601844}
-  m_Layer: 0
-  m_Name: PlayerHealth
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1988601844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988601843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85f95d135d1a58d41823369d45f13f72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  player: {fileID: 1983528286}
---- !u!4 &1988601845
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988601843}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.222372, y: -197.33127, z: 517.0357}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1990653331 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100166, guid: 8fa2a9d0520e5304190570b9b32fff5a, type: 3}
@@ -6950,4 +6919,3 @@ SceneRoots:
   - {fileID: 620830545}
   - {fileID: 1039178033}
   - {fileID: 136917639}
-  - {fileID: 1988601845}

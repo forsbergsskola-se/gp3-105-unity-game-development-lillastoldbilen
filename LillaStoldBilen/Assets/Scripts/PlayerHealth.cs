@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public UnityEvent<float> OnPlayerHealthChanged;
     public float health = 100f;
     public Player player;
 
@@ -14,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     {
         health -= damage;
         Debug.Log("Health = " + health.ToString());
+        OnPlayerHealthChanged.Invoke(health);
     }
     
 }
