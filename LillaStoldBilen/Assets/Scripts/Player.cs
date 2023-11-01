@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
         return null;
     }
 
-    private void Toggle() //NOT DONE
+    private void Toggle()
     {
         if (rightHand.equippedItem == null && leftHand.equippedItem != null)
         {
