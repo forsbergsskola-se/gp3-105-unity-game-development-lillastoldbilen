@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
     public Hand rightHand;
     public Hand leftHand;
     public float MovementSpeed;
-    public int MoneyBag;
+    private int moneyBag;
     public bool ActiveItem;
 
     void Update()
@@ -20,6 +20,20 @@ public class Player : MonoBehaviour
     public void CashIn(int money) //When player is close enough, money adds to the MoneyBag
     {
         MoneyBag += money;
+    }
+
+    private const string MoneyBagKey = "MoneyBag";
+
+    public int MoneyBag
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(MoneyBagKey, 0);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(MoneyBagKey, value);
+        }
     }
 
     public Hand GetHand()
