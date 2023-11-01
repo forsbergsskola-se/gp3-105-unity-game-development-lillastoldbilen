@@ -92,6 +92,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 100166, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 100166, guid: 16044bf911e3e664d81c3be8863c77e8, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
@@ -302,7 +306,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   health: 100
-  player: {fileID: 1718595196478352658}
 --- !u!114 &4214932716033915097
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,7 +9,15 @@ public class Equipped : MonoBehaviour
     public Image imageComponent;
     void Update()
     {
-        this.imageComponent.sprite = FindObjectOfType<Player>().rightHand.equippedItem.gameObject
-            .GetComponent<ItemPickUp>().Sprite;
+        if (FindObjectOfType<Player>().rightHand.equippedItem == null)
+        {
+            imageComponent.enabled = false;
+        }
+        else
+        {
+            imageComponent.enabled = true;
+            this.imageComponent.sprite = FindObjectOfType<Player>().rightHand.equippedItem.gameObject
+                .GetComponent<ItemPickUp>().Sprite;
+        }
     }
 }
