@@ -743,7 +743,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 1088257809}
-  playerHealth: {fileID: 0}
   player: {fileID: 1983528286}
 --- !u!1 &149474923
 GameObject:
@@ -3638,6 +3637,10 @@ PrefabInstance:
       propertyPath: UseThisItem
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4257553291933853069, guid: 4641758d3e2554c4ea84b639ce984bf5, type: 3}
+      propertyPath: Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9937d6dfde14a4640b8f3827002c218a, type: 3}
     - target: {fileID: 4650136875367145726, guid: 4641758d3e2554c4ea84b639ce984bf5, type: 3}
       propertyPath: m_Name
       value: Gun

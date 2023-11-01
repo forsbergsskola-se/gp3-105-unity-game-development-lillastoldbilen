@@ -15,5 +15,4 @@ public class ItemPickUp : MonoBehaviour
             hand.Equip(this.gameObject);
         }
     }
-    
 }

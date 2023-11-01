@@ -6,15 +6,11 @@ using UnityEngine.UI;
 
 public class Equipped : MonoBehaviour
 {
-    private Player player;
-    public RawImage image;
-    public GameObject Gun;
-    public GameObject Bottle;
+    public Image imageComponent;
+    public Sprite sprite;
     void Update()
     {
-        if (player.rightHand.equippedItem == gameObject.GetComponent<Gun>())
-        {
-            
-        }
+        FindObjectOfType<Player>().rightHand.equippedItem.gameObject.GetComponent<ItemPickUp>().Sprite;
+        this.imageComponent.sprite = sprite;
     }
 }
