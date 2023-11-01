@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
 {
-
+    public Sprite Sprite;
     void OnCollisionEnter(Collision other)
     {
         Player player = other.gameObject.GetComponent<Player>();
