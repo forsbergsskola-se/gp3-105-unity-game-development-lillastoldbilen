@@ -20,6 +20,9 @@ public class GameOverUI : MonoBehaviour
 
     IEnumerator Co_PlayerDeath()
     {
+        
+        int halfMoney = player.MoneyBag / 2;
+        player.MoneyBag = halfMoney;
         Destroy(player.gameObject);
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("Main Game");
