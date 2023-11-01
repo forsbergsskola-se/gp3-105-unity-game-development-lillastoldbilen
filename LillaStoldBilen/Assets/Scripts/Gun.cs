@@ -18,7 +18,7 @@ public class Gun : MonoBehaviour
     
     void Update()
     {
-        if (this.gameObject == FindObjectOfType<Player>()?.rightHand?.equippedItem)
+        if (this.gameObject == FindObjectOfType<Player>().rightHand.equippedItem)
         {
             UseThisItem |= Input.GetKeyDown(KeyCode.Mouse0);
 
@@ -31,8 +31,9 @@ public class Gun : MonoBehaviour
 
             if (UseThisItem && magazin > 0)
             {
-                Transform barrelEnd = barrel.transform.Find("Barrel"); 
-                GameObject newBullet = Instantiate(Bullet, barrelEnd.position, Quaternion.LookRotation(FindObjectOfType<Camera>().transform.forward));
+                Transform barrelEnd = barrel;
+                
+                GameObject newBullet = Instantiate(Bullet, barrelEnd.position, Quaternion.LookRotation(FindObjectOfType<Player>().transform.forward));
                 Rigidbody BulletRB = newBullet.GetComponent<Rigidbody>();
                 BulletRB.velocity = newBullet.transform.forward * BulletSpeed;
                 magazin--;

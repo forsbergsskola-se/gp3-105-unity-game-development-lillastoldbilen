@@ -8,6 +8,6 @@ public class PlayerAnimation : MonoBehaviour
 
     void Update()
     {
-        this.animator.SetBool("WhenWalking",GetComponent<PlayerController>().walkingNow);
+        this.animator.SetBool("WhenWalking",this.GetComponent<PlayerController>().walkingNow);
     }
 }

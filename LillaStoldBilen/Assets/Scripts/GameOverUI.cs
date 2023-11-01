@@ -5,36 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class GameOverUI : MonoBehaviour
 {
-        void Start()
-        {
-                UpdateUI();
-        }
 
-        public TMP_Text label;
-        public PlayerHealth playerHealth;
-        public Player player;
-        
+    public TMP_Text label;
+    public Player player;
 
-        public void UpdateUI()
+    public void UpdateUI(float newHealth)
+    {
+        if (newHealth <= 0)
         {
-                if (playerHealth.health <= 0)
-                {
-                        this.label.text = "GAME OVER";
-                }
+            this.label.text = "GAME OVER";
+            StartCoroutine(Co_PlayerDeath());
         }
+    }
 
-        public void PlayerDeath()
-        {
-                if (playerHealth.health <= 0)
-                {
-                        StartCoroutine(OnDeath());
-                }
-        }
-        
-        IEnumerator OnDeath()
-        {
-                Destroy(player.gameObject);
-                yield return new WaitForSeconds(2);
-                SceneManager.LoadScene("Main Game");
-        }
+    IEnumerator Co_PlayerDeath()
+    {
+        Destroy(player.gameObject);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Main Game");
+    }
 }

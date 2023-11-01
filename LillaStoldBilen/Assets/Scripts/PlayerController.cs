@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody playerRigidbody;
     public bool OnEnable { get; set; }
-    public bool walkingNow;
+    public bool walkingNow; // Animation-Purpose
 
     void Start()
     {
