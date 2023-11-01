@@ -9,6 +9,6 @@ public class PlayerAnimation : MonoBehaviour
     void Update()
     {
         this.animator.SetBool("WhenWalking",this.GetComponent<PlayerController>().walkingNow);
-        this.animator.SetBool("Dying",FindObjectOfType<GameOverUI>().deathAnimation);
+        this.animator.SetBool("Dying",FindObjectOfType<PlayerHealth>().deathAnimation);
     }
 }
