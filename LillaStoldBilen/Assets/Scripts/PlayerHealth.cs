@@ -9,8 +9,6 @@ public class PlayerHealth : MonoBehaviour
 {
     public UnityEvent<float> OnPlayerHealthChanged;
     public float health = 100f;
-    public Player player;
-
     public void TakeDamage(float damage)
     {
         health -= damage;
