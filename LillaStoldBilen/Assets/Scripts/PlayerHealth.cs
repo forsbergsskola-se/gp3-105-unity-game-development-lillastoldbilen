@@ -15,11 +15,5 @@ public class PlayerHealth : MonoBehaviour
         health -= damage;
         Debug.Log("Health = " + health.ToString());
     }
-
-    IEnumerator OnDeath()
-    {
-        Destroy(player.gameObject);
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("Main Game");
-    }
+    
 }
