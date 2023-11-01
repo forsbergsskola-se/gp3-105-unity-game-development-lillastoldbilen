@@ -7,9 +7,9 @@ using UnityEngine.UI;
 public class Equipped : MonoBehaviour
 {
     public Image imageComponent;
-    public Sprite sprite;
     void Update()
     {
-        this.imageComponent.sprite = FindObjectOfType<Player>().rightHand.equippedItem.gameObject.GetComponent<ItemPickUp>().GetComponent<Sprite>();
+        this.imageComponent.sprite = FindObjectOfType<Player>().rightHand.equippedItem.gameObject
+            .GetComponent<ItemPickUp>().Sprite;
     }
 }
