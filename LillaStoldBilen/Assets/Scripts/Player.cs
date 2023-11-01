@@ -49,9 +49,20 @@ public class Player : MonoBehaviour
         if (rightHand.equippedItem == null && leftHand.equippedItem != null)
         {
             rightHand.Equip(leftHand.equippedItem);
+            leftHand.equippedItem = null;
         }
-        GameObject pocket = rightHand.equippedItem;
-        rightHand.Equip(leftHand.equippedItem);
-        leftHand.Equip(pocket);
+        else if (rightHand.equippedItem != null && leftHand.equippedItem == null)
+        { 
+            leftHand.Equip(rightHand.equippedItem);
+            rightHand.equippedItem = null;
+
+        }
+
+        if (rightHand.equippedItem != null && leftHand.equippedItem != null) // When PLayer has 2 items
+        {
+            GameObject pocket = rightHand.equippedItem;
+            rightHand.Equip(leftHand.equippedItem);
+            leftHand.Equip(pocket);
+        }
     }
 }
