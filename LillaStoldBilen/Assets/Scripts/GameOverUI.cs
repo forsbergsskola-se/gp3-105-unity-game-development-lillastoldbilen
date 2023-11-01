@@ -9,11 +9,13 @@ public class GameOverUI : MonoBehaviour
     public TMP_Text label;
     public Player player;
 
+    public bool deathAnimation; // Animation-Purpose
     public void UpdateUI(float newHealth)
     {
         if (newHealth <= 0)
         {
             this.label.text = "GAME OVER";
+            deathAnimation = true;
             StartCoroutine(Co_PlayerDeath());
         }
     }
@@ -24,7 +26,8 @@ public class GameOverUI : MonoBehaviour
         int halfMoney = player.MoneyBag / 2;
         player.MoneyBag = halfMoney;
         Destroy(player.gameObject);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(6);
         SceneManager.LoadScene("Main Game");
+        deathAnimation = false;
     }
 }
