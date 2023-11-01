@@ -15,6 +15,7 @@ public class Gun : MonoBehaviour
     
     public float BulletSpeed = 100f;
     public bool UseThisItem;
+    public bool isShooting; // Animation-Purpose
     
     void Update()
     {
@@ -31,6 +32,7 @@ public class Gun : MonoBehaviour
 
             if (UseThisItem && magazin > 0)
             {
+                isShooting = UseThisItem;
                 Transform barrelEnd = barrel;
                 
                 GameObject newBullet = Instantiate(Bullet, barrelEnd.position, Quaternion.LookRotation(FindObjectOfType<Player>().transform.forward));
@@ -39,6 +41,7 @@ public class Gun : MonoBehaviour
                 magazin--;
             }
             UseThisItem = false;
+            isShooting = false;
         }
     }
 
