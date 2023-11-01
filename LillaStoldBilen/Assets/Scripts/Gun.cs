@@ -17,7 +17,7 @@ public class Gun : MonoBehaviour
     
     void Update()
     {
-        if (this.gameObject == FindObjectOfType<Player>().rightHand.equippedItem)
+        if (this.gameObject == FindObjectOfType<Player>()?.rightHand?.equippedItem)
         {
             UseThisItem |= Input.GetKeyDown(KeyCode.Mouse0);
 

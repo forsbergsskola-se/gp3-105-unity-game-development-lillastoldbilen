@@ -14,10 +14,6 @@ public class PlayerHealth : MonoBehaviour
     {
         health -= damage;
         Debug.Log("Health = " + health.ToString());
-        if (health <= 0)
-        {
-            StartCoroutine(OnDeath());
-        }
     }
 
     IEnumerator OnDeath()

@@ -18,7 +18,7 @@ public class Bottle_Behavior : MonoBehaviour
     }
     void Update()
     {
-        if (this.gameObject == FindObjectOfType<Player>().rightHand.equippedItem)
+        if (this.gameObject == FindObjectOfType<Player>()?.rightHand?.equippedItem)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
