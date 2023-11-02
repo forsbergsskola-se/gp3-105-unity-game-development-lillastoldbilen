@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class Gun : MonoBehaviour
 {   
     public UnityEvent onPickedUp;
-    public TMP_Text reloadText;
     public int magazin = 10;
     public GameObject Bullet;
     
