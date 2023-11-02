@@ -66,7 +66,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100166, guid: 8fa2a9d0520e5304190570b9b32fff5a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 95965549533741683}
+    - targetCorrespondingSourceObject: {fileID: 100166, guid: 8fa2a9d0520e5304190570b9b32fff5a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7177428580877720651}
   m_SourcePrefab: {fileID: 100100000, guid: 8fa2a9d0520e5304190570b9b32fff5a, type: 3}
+--- !u!95 &5762817683284062824 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 8fa2a9d0520e5304190570b9b32fff5a, type: 3}
+  m_PrefabInstance: {fileID: 5762817683291408136}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5762817683291439182 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100166, guid: 8fa2a9d0520e5304190570b9b32fff5a, type: 3}
@@ -122,3 +130,16 @@ CapsuleCollider:
   m_Height: 1.7
   m_Direction: 1
   m_Center: {x: 0, y: 0.81, z: 0}
+--- !u!114 &-7177428580877720651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762817683291439182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee995ee572aa18e49b61dd5b2f4ced89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPCanimator: {fileID: 5762817683284062824}

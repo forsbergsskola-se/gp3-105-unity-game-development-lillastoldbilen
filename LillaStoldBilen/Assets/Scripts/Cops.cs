@@ -12,12 +12,17 @@ public class Cops : MonoBehaviour
     {
         if (Health <= 0)
         {
-            Destroy(this.gameObject);
+            Invoke("CopDies",3);
             Debug.Log("Cop killed!");
         }
     }
     private void OnDestroy()
     { 
         this.OnDeath.Invoke();
+    }
+
+    void CopDies()
+    {
+        Destroy(this.gameObject);
     }
 }
