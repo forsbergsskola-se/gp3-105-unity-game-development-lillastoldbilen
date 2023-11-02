@@ -135,6 +135,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: StreetSellerStand prefab
       objectReference: {fileID: 0}
+    - target: {fileID: 4120301329095182, guid: 110af0d3eee946d4d9ee0ca4e522611a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4120301329095182, guid: 110af0d3eee946d4d9ee0ca4e522611a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4857008648702526, guid: 110af0d3eee946d4d9ee0ca4e522611a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.54
@@ -3264,7 +3272,7 @@ PrefabInstance:
       objectReference: {fileID: 1983528277}
     - target: {fileID: 3592138887001480416, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       propertyPath: accelerationSpeed
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5952803295355731361, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       propertyPath: maxHealthForOrangeCar
