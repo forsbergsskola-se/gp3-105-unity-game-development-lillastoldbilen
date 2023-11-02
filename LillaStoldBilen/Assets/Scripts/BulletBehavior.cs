@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 public class BulletBehavior : MonoBehaviour
 {
-    public float BulletDamage = 150;
+    public float BulletDamage = 80;
     public GameObject BulletFire;
     public void OnCollisionEnter(Collision other)
     { 
