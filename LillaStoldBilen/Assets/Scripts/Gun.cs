@@ -33,6 +33,7 @@ public class Gun : MonoBehaviour
             if (UseThisItem && magazin > 0)
             {
                 isShooting = UseThisItem;
+                
                 Transform barrelEnd = barrel;
                 
                 GameObject newBullet = Instantiate(Bullet, barrelEnd.position, Quaternion.LookRotation(FindObjectOfType<Player>().transform.forward));
