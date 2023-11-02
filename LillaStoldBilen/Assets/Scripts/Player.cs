@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
     public Hand leftHand;
     public float MovementSpeed;
     private int moneyBag;
-    public bool ActiveItem;
 
     void Update()
     {
