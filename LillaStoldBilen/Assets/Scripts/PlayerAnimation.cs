@@ -10,9 +10,6 @@ public class PlayerAnimation : MonoBehaviour
     {
         this.animator.SetBool("WhenWalking", this.GetComponent<PlayerController>().walkingNow);
         this.animator.SetBool("Dying", FindObjectOfType<GameOverUI>().deathAnimation);
-        
-        this.animator.SetBool("GunInHand",GetComponent<Player>().rightHand.equippedItem == GetComponent<Gun>().gameObject);
-        this.animator.SetBool("GunTrigger",GetComponent<Gun>().isShooting);
     }
     
 }
