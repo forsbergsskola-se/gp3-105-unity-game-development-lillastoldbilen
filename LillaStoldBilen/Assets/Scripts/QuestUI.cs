@@ -14,7 +14,7 @@ public class QuestUI : MonoBehaviour
     {
         if (quest.IsAccepted())
         {
-            this.label.text = $"{quest.GetCopKilled()}/1 Cop killed";
+            this.label.text = "0/1 Cop killed";
         }
         else
         {
