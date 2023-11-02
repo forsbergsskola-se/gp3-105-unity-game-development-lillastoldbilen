@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour
 {   
@@ -16,6 +17,7 @@ public class Gun : MonoBehaviour
     public float BulletSpeed = 100f;
     public bool UseThisItem;
     public bool isShooting; // Animation-Purpose
+    public bool isReloading;
     
     void Update()
     {
@@ -25,9 +27,8 @@ public class Gun : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.R))
             {
+                TextReload();
                 Invoke("Reload", 2); // Reload Cooldown
-                reloadText.text = "Reloading...";
-                reloadText.gameObject.SetActive(true);
             }
 
             if (UseThisItem && magazin > 0)
@@ -46,10 +47,16 @@ public class Gun : MonoBehaviour
         }
     }
 
-    public void Reload() 
-    { 
-        magazin = 10; 
+    public void Reload()
+    {
+        magazin = 10;
         Debug.Log("Gun is reloaded"); 
+        isReloading = false;
+    }
+
+    public void TextReload()
+    {
+        isReloading = true;
     }
     
     public void OnPickup()

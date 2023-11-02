@@ -22,9 +22,18 @@ public class AmmoDisplay : MonoBehaviour
             isFiring = false;
         }
 
-        if (gun.magazin < 1)
+        if (gun.magazin < 1 && !gun.isReloading)
         {
             reloadText.text = "[R] to reload!";
+            reloadText.gameObject.SetActive(true);
+        }
+        else if (gun.magazin == 10)
+        {
+            reloadText.gameObject.SetActive(false);
+        }
+        else if (gun.isReloading)
+        {
+            reloadText.text = "Reloading...";
             reloadText.gameObject.SetActive(true);
         }
         else
