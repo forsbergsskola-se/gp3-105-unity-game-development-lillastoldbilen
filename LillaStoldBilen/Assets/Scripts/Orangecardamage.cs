@@ -1,7 +1,3 @@
-using System;
-using System.Diagnostics.Contracts;
-using DefaultNamespace;
-using Palmmedia.ReportGenerator.Core.Reporting.Builders;
 using UnityEngine;
 
 public class Orangecardamage : MonoBehaviour
@@ -16,6 +12,7 @@ public class Orangecardamage : MonoBehaviour
     private void Start()
     {
         orangeCarCurrentHealth = maxHealthForOrangeCar;
+        
     }
 
     private void TakeDamage(float amount)
