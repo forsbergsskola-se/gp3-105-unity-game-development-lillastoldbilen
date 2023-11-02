@@ -9,22 +9,25 @@ public class GameOverUI : MonoBehaviour
     public TMP_Text label;
     public Player player;
 
+    public bool deathAnimation; // Animation-Purpose
+    
     public void UpdateUI(float newHealth)
     {
         if (newHealth <= 0)
         {
             this.label.text = "GAME OVER";
+            deathAnimation = true;
+            deathAnimation = false;
             StartCoroutine(Co_PlayerDeath());
         }
     }
 
     IEnumerator Co_PlayerDeath()
     {
-        
         int halfMoney = player.MoneyBag / 2;
         player.MoneyBag = halfMoney;
-        Destroy(player.gameObject);
         yield return new WaitForSeconds(6);
+        Destroy(player.gameObject);
         SceneManager.LoadScene("Main Game");
     }
 }
