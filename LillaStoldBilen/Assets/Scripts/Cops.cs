@@ -5,7 +5,6 @@ using UnityEngine.Events;
 public class Cops : MonoBehaviour
 {
     public float Health = 150;
-    public float MovementSpeed;
     public UnityEvent OnDeath;
 
     void Update()

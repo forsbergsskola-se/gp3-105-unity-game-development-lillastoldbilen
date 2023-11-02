@@ -32,7 +32,7 @@ public class Gun : MonoBehaviour
 
             if (UseThisItem && magazin > 0)
             {
-                isShooting = UseThisItem;
+                isShooting = true;
                 
                 Transform barrelEnd = barrel;
                 
@@ -42,7 +42,6 @@ public class Gun : MonoBehaviour
                 magazin--;
             }
             UseThisItem = false;
-            isShooting = false;
         }
     }
 
