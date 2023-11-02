@@ -17,7 +17,7 @@ public class GameOverUI : MonoBehaviour
         {
             this.label.text = "GAME OVER";
             deathAnimation = true;
-            deathAnimation = false;
+            FindObjectOfType<PlayerController>().enabled = false;
             StartCoroutine(Co_PlayerDeath());
         }
     }
@@ -29,5 +29,8 @@ public class GameOverUI : MonoBehaviour
         yield return new WaitForSeconds(6);
         Destroy(player.gameObject);
         SceneManager.LoadScene("Main Game");
+        deathAnimation = false;
+        FindObjectOfType<PlayerController>().enabled = true;
+
     }
 }
