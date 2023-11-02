@@ -3721,8 +3721,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1983528277}
     - target: {fileID: 3592138887001480416, guid: 21784e75583bd7847b965f9b16505160, type: 3}
+      propertyPath: InCar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592138887001480416, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       propertyPath: turnSpeed
-      value: 50
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 3592138887001480416, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       propertyPath: exitCarSpawn
@@ -3742,7 +3746,7 @@ PrefabInstance:
       objectReference: {fileID: 1983528277}
     - target: {fileID: 3592138887001480416, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       propertyPath: accelerationSpeed
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5952803295355731361, guid: 21784e75583bd7847b965f9b16505160, type: 3}
       propertyPath: maxHealthForOrangeCar
