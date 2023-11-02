@@ -9176,6 +9176,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialPopUp
       objectReference: {fileID: 0}
+    - target: {fileID: 561693514371953910, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988840741582289067, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.3817139
+      objectReference: {fileID: 0}
     - target: {fileID: 8765743438871984834, guid: d933f13bcd7032543aafd784f5908cc6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
